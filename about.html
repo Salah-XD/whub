@@ -2,24 +2,31 @@
 <!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Thu Jan 26 2023 13:43:39 GMT+0000 (Coordinated Universal Time) -->
 <html
   data-wf-domain="az-milano.webflow.io"
-  data-wf-page="62f3a1ab50d80185f25bd842"
+  data-wf-page="63036f19271cd822a854ba1a"
   data-wf-site="62f3719eed276382ac6eeb38"
 >
   <head>
     <meta charset="utf-8" />
-    <title>Hoodies</title>
-    <meta content="hoodies" name="description" />
-    <meta content="Hoodies" property="og:title" />
-    <meta content="hoodies" property="og:description" />
+    <title>Milano - Webflow Ecommerce website template</title>
     <meta
-      content="https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3aec4d36866423553ef87_Category%20Image%2001.jpg"
-      property="og:image"
+      content="Milano - Webflow Ecommerce website template"
+      name="description"
     />
-    <meta content="Hoodies" property="twitter:title" />
-    <meta content="hoodies" property="twitter:description" />
     <meta
-      content="https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3aec4d36866423553ef87_Category%20Image%2001.jpg"
-      property="twitter:image"
+      content="Milano - Webflow Ecommerce website template"
+      property="og:title"
+    />
+    <meta
+      content="Milano - Webflow Ecommerce website template"
+      property="og:description"
+    />
+    <meta
+      content="Milano - Webflow Ecommerce website template"
+      property="twitter:title"
+    />
+    <meta
+      content="Milano - Webflow Ecommerce website template"
+      property="twitter:description"
     />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
@@ -64,7 +71,7 @@
     </script>
   </head>
   <body>
-    <div style="opacity: 0" class="fixed-navbar">
+    <div style="opacity: 1" class="fixed-navbar">
       <div
         data-animation="default"
         class="navbar w-nav"
@@ -79,7 +86,7 @@
         <div class="container nav-container">
           <div class="nav-menu-container">
             <div class="navbar-menu-holder">
-              <a href="../index.html" class="brand w-nav-brand"
+              <a href="index.html" class="brand w-nav-brand"
                 ><img
                   src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f3783543f2596bab2a866a_Milano%20Logo%20Black.svg"
                   loading="lazy"
@@ -282,7 +289,7 @@
                   class="w-commerce-commercecartwrapper"
                 >
                   <a
-                    href="hoodies#"
+                    href="about#"
                     data-node-type="commerce-cart-open-link"
                     aria-haspopup="dialog"
                     aria-label="Open cart"
@@ -316,7 +323,7 @@
                           Your Cart
                         </h4>
                         <a
-                          href="hoodies#"
+                          href="about#"
                           data-node-type="commerce-cart-close-link"
                           role="button"
                           aria-label="Close cart"
@@ -356,7 +363,7 @@
                             <div class="w-commerce-commercecartitem cart-item">
                               <img
                                 data-wf-bindings="%5B%7B%22src%22%3A%7B%22type%22%3A%22ImageRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_main_image_4dr%22%7D%7D%5D"
-                                src="hoodies"
+                                src="about"
                                 alt=""
                                 class="w-commerce-commercecartitemimage product-image w-dyn-bind-empty"
                               />
@@ -422,7 +429,7 @@
                                 </ul>
                               </div>
                               <a
-                                href="hoodies#"
+                                href="about#"
                                 role="button"
                                 aria-label="Remove item from cart"
                                 data-wf-bindings="%5B%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
@@ -557,7 +564,7 @@
                                 >
                               </div>
                               <a
-                                href="../checkout"
+                                href="checkout"
                                 value="PROCEED TO CHECKOUT"
                                 data-node-type="cart-checkout-button"
                                 class="w-commerce-commercecartcheckoutbutton button add-to-card-button"
@@ -576,7 +583,7 @@
                           >
                             No items found.
                           </div>
-                          <a href="../products" class="button w-button"
+                          <a href="products" class="button w-button"
                             >GO SEE PRODUCTS</a
                           >
                         </div>
@@ -611,9 +618,8 @@
                       <div role="list" class="w-dyn-items">
                         <div role="listitem" class="w-dyn-item">
                           <a
-                            href="hoodies"
-                            aria-current="page"
-                            class="nav-link w-inline-block w--current"
+                            href="category/hoodies"
+                            class="nav-link w-inline-block"
                             ><div class="nav-link-container-perspective">
                               <div class="nav-link-container _01">
                                 <div class="number-holder">
@@ -641,7 +647,9 @@
                           ></a>
                         </div>
                         <div role="listitem" class="w-dyn-item">
-                          <a href="sweatshirts" class="nav-link w-inline-block"
+                          <a
+                            href="category/sweatshirts"
+                            class="nav-link w-inline-block"
                             ><div class="nav-link-container-perspective">
                               <div class="nav-link-container _01">
                                 <div class="number-holder">
@@ -669,7 +677,9 @@
                           ></a>
                         </div>
                         <div role="listitem" class="w-dyn-item">
-                          <a href="shirts" class="nav-link w-inline-block"
+                          <a
+                            href="category/shirts"
+                            class="nav-link w-inline-block"
                             ><div class="nav-link-container-perspective">
                               <div class="nav-link-container _01">
                                 <div class="number-holder">
@@ -697,7 +707,9 @@
                           ></a>
                         </div>
                         <div role="listitem" class="w-dyn-item">
-                          <a href="t-shirts" class="nav-link w-inline-block"
+                          <a
+                            href="category/t-shirts"
+                            class="nav-link w-inline-block"
                             ><div class="nav-link-container-perspective">
                               <div class="nav-link-container _01">
                                 <div class="number-holder">
@@ -725,7 +737,9 @@
                           ></a>
                         </div>
                         <div role="listitem" class="w-dyn-item">
-                          <a href="jackets" class="nav-link w-inline-block"
+                          <a
+                            href="category/jackets"
+                            class="nav-link w-inline-block"
                             ><div class="nav-link-container-perspective">
                               <div class="nav-link-container _01">
                                 <div class="number-holder">
@@ -835,360 +849,475 @@
         </div>
       </div>
     </div>
-    <div class="section">
-      <div class="container">
-        <div
-          style="
-            -webkit-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-              rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-            -moz-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0)
-              rotateY(0) rotateZ(0) skew(0, 0);
-            -ms-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0)
-              rotateY(0) rotateZ(0) skew(0, 0);
-            transform: translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0)
-              rotateY(0) rotateZ(0) skew(0, 0);
-            opacity: 0;
-          "
-          class="animation-on-load-01"
-        >
-          <div class="products-hero-container">
-            <div
-              style="
-                -webkit-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="animation-on-load-01"
-            >
-              <h2 class="bold-text caps">Hoodies</h2>
-            </div>
-            <div
-              style="
-                -webkit-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 30px, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="animation-on-load-02"
-            >
-              <div class="grid-8-col">
-                <div
-                  id="w-node-e917f83e-203e-2ef7-ceea-9cfb85a0f025-f25bd842"
-                  class="content"
-                >
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Netus gravida odio sagittis, risus sodales nec. Sagittis
-                    nisi at venenatis, pretium. Risus neque a, egestas iaculis.
-                  </p>
+    <div class="section about-me-section">
+      <div class="about-hero-container">
+        <div class="container about-container">
+          <div class="about-slider-container">
+            <div class="animation-on-load-01 slide">
+              <div
+                data-delay="4000"
+                data-animation="cross"
+                class="slider w-slider"
+                data-autoplay="false"
+                data-easing="ease"
+                data-hide-arrows="false"
+                data-disable-swipe="false"
+                data-autoplay-limit="0"
+                data-nav-spacing="3"
+                data-duration="1700"
+                data-infinite="true"
+              >
+                <div class="mask w-slider-mask">
+                  <div class="slide w-slide">
+                    <div class="about-slider-holder">
+                      <div class="slider-image-holder">
+                        <div class="slider-number-container">
+                          <h1 class="year-text">1972</h1>
+                        </div>
+                        <img
+                          src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f884d011cfd6bfeae0_CTA%20Image%2001.jpg"
+                          loading="lazy"
+                          srcset="
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f884d011cfd6bfeae0_CTA%20Image%2001-p-500.jpg   500w,
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f884d011cfd6bfeae0_CTA%20Image%2001-p-800.jpg   800w,
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f884d011cfd6bfeae0_CTA%20Image%2001-p-1080.jpg 1080w,
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f884d011cfd6bfeae0_CTA%20Image%2001.jpg        1300w
+                          "
+                          sizes="(max-width: 479px) 150px, (max-width: 991px) 270px, 370px"
+                          alt=""
+                          class="slider-image"
+                        />
+                      </div>
+                      <div class="slider-details-container">
+                        <h2 class="slider-text">In the business since 1972</h2>
+                        <p class="slider-description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Quis nunc, netus faucibus adipiscing. Posuere
+                          nisl massa interdum magna. Sollicitudin ac enim libero
+                          id ac. Aenean pellentesque in eu dolor, tristique
+                          viverra amet bibendum.<br />
+                        </p>
+                      </div>
+                      <div class="slider-lines-container">
+                        <div class="slider-line"></div>
+                        <div class="slider-line"></div>
+                        <div class="slider-year-small">1973</div>
+                        <div class="slider-line"></div>
+                        <div class="slider-line"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide w-slide">
+                    <div class="about-slider-holder">
+                      <div class="slider-image-holder">
+                        <div class="slider-number-container">
+                          <h1 class="year-text">1973</h1>
+                        </div>
+                        <img
+                          src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg"
+                          loading="lazy"
+                          srcset="
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-500.jpg  500w,
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-800.jpg  800w,
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg       1270w
+                          "
+                          sizes="(max-width: 479px) 150px, (max-width: 991px) 270px, 370px"
+                          alt=""
+                          class="slider-image"
+                        />
+                      </div>
+                      <div class="slider-details-container">
+                        <h2 class="slider-text">In the business since 1972</h2>
+                        <p class="slider-description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Quis nunc, netus faucibus adipiscing. Posuere
+                          nisl massa interdum magna. Sollicitudin ac enim libero
+                          id ac. Aenean pellentesque in eu dolor, tristique
+                          viverra amet bibendum.<br />
+                        </p>
+                      </div>
+                      <div class="slider-lines-container">
+                        <div class="slider-line"></div>
+                        <div class="slider-line"></div>
+                        <div class="slider-year-small">1972</div>
+                        <div class="slider-line"></div>
+                        <div class="slider-line"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide w-slide">
+                    <div class="about-slider-holder">
+                      <div class="slider-image-holder">
+                        <div class="slider-number-container">
+                          <h1 class="year-text">1984</h1>
+                        </div>
+                        <img
+                          src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f90245da34966287f0_CTA%20Image%2006.jpg"
+                          loading="lazy"
+                          srcset="
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f90245da34966287f0_CTA%20Image%2006-p-500.jpg 500w,
+                            https://assets.website-files.com/62f3719eed276382ac6eeb38/62f4c6f90245da34966287f0_CTA%20Image%2006.jpg       690w
+                          "
+                          sizes="(max-width: 479px) 150px, (max-width: 991px) 270px, 370px"
+                          alt=""
+                          class="slider-image"
+                        />
+                      </div>
+                      <div class="slider-details-container">
+                        <h2 class="slider-text">In the business since 1984</h2>
+                        <p class="slider-description">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Quis nunc, netus faucibus adipiscing. Posuere
+                          nisl massa interdum magna. Sollicitudin ac enim libero
+                          id ac. Aenean pellentesque in eu dolor, tristique
+                          viverra amet bibendum.<br />
+                        </p>
+                      </div>
+                      <div class="slider-lines-container">
+                        <div class="slider-line"></div>
+                        <div class="slider-line"></div>
+                        <div class="slider-year-small">1984</div>
+                        <div class="slider-line"></div>
+                        <div class="slider-line"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="about-slider-left-arrow w-slider-arrow-left">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6303910b3165c55541e1ced5_Slider%20Arrow%20DOwn.svg"
+                    loading="lazy"
+                    alt=""
+                    class="arrow-up-image"
+                  />
+                </div>
+                <div class="right-arrow w-slider-arrow-right">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6303910bc5a73e6a119ab5dd_Slider%20Arrow%20Up.svg"
+                    loading="lazy"
+                    alt=""
+                    class="arrow-up-image"
+                  />
+                </div>
+                <div class="hide w-slider-nav w-round"></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="category-small-container no-margins">
-          <div
-            data-hover="false"
-            data-delay="0"
-            class="dropdown category w-dropdown"
-          >
-            <div class="dropdown-toggle semi-bold category w-dropdown-toggle">
-              <div>Hoodies</div>
-              <img
-                src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f508d4791f0a36e45ace00_Drop%20Down%20Arrow.svg"
-                loading="lazy"
-                alt=""
-                class="drop-down-arrow"
-              />
+      </div>
+    </div>
+    <div class="section overflow-hidden">
+      <div class="container _6ems">
+        <div class="center-text">
+          <div class="fade-in-move-on-scroll">
+            <h1><span class="accent-text-color">OUR</span><br />PHILOSOPHY</h1>
+          </div>
+          <div class="fade-in-move-on-scroll">
+            <div class="w-layout-grid grid-6-col">
+              <p id="w-node-_2a3b72ad-ff6e-d2bd-95ee-eb3dff8c2e10-a854ba1a">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta
+                feugiat etiam aliquet aliquet tellus vel. Et maecenas id
+                bibendum sit. Augue nulla tortor faucibus nunc.
+              </p>
             </div>
-            <nav class="dropdown-list w-dropdown-list">
-              <div class="w-dyn-list">
-                <div role="list" class="w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="sweatshirts" class="dropdown-link w-dropdown-link"
-                      >Sweatshirts</a
-                    >
+          </div>
+        </div>
+        <div class="our-philosphy-card-holder">
+          <div class="philosophy-card">
+            <div class="philosophy-card-left-side">
+              <h1 class="light-grey-text no-margins">01</h1>
+              <h4 class="no-margins">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </h4>
+            </div>
+            <div class="card-break"></div>
+            <div class="philosophy-card-right-side">
+              <p class="card-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                tristique posuere.
+              </p>
+            </div>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-card-left-side">
+              <h1 class="light-grey-text no-margins">02</h1>
+              <h4 class="no-margins">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </h4>
+            </div>
+            <div class="card-break"></div>
+            <div class="philosophy-card-right-side">
+              <p class="light-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                tristique posuere.
+              </p>
+            </div>
+          </div>
+          <div class="philosophy-card">
+            <div class="philosophy-card-left-side">
+              <h1 class="light-grey-text no-margins">03</h1>
+              <h4 class="no-margins">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </h4>
+            </div>
+            <div class="card-break"></div>
+            <div class="philosophy-card-right-side">
+              <p class="light-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
+                tristique posuere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section white-section">
+      <div class="container _6ems">
+        <div class="w-layout-grid grid-8-col">
+          <div
+            id="w-node-cda9d586-805a-b5d9-2464-749d04e6bfe4-a854ba1a"
+            class="content"
+          >
+            <div class="sticky-text-container">
+              <div class="fade-in-move-on-scroll">
+                <h3>What they say about us</h3>
+              </div>
+            </div>
+          </div>
+          <div
+            id="w-node-_418ae47e-5ec8-bbc8-d4c9-3196d04cde7b-a854ba1a"
+            class="testimonial-container"
+          >
+            <div class="testimonial-holder">
+              <div class="content">
+                <p class="paragraph-m grey-text---light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Varius vel bibendum nulla leo curabitur vulputate imperdiet
+                  laoreet. Sit nam pellentesque leo quisque elit. Nibh nunc
+                  maecenas in commodo massa adipiscing feugiat. Ante velit
+                  facilisis tellus at sagittis, in felis, massa.
+                </p>
+              </div>
+              <div class="testimonial-details">
+                <div class="testimonial-author-holder">
+                  <div class="testimonial-profile-picture-container">
+                    <img
+                      src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg"
+                      loading="lazy"
+                      srcset="
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-500.jpg  500w,
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-800.jpg  800w,
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg       1270w
+                      "
+                      sizes="48px"
+                      alt=""
+                      class="testimonial-profile-picture"
+                    />
                   </div>
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="shirts" class="dropdown-link w-dropdown-link"
-                      >Shirts</a
-                    >
-                  </div>
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="t-shirts" class="dropdown-link w-dropdown-link"
-                      >T-Shirts</a
-                    >
-                  </div>
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="jackets" class="dropdown-link w-dropdown-link"
-                      >Jackets</a
-                    >
+                  <div class="testimonial-author-name-holder">
+                    <p class="paragraph-s no-margins">Robert Fox</p>
+                    <p class="paragraph-s job-position">CEO at Dragosh</p>
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
+            <div class="testimonial-holder">
+              <div class="content">
+                <p class="paragraph-m grey-text---light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Varius vel bibendum nulla leo curabitur vulputate imperdiet
+                  laoreet. Sit nam pellentesque leo quisque elit. Nibh nunc
+                  maecenas in commodo massa adipiscing feugiat. Ante velit
+                  facilisis tellus at sagittis, in felis, massa.
+                </p>
+              </div>
+              <div class="testimonial-details">
+                <div class="testimonial-author-holder">
+                  <div class="testimonial-profile-picture-container">
+                    <img
+                      src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg"
+                      loading="lazy"
+                      srcset="
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-500.jpg  500w,
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-800.jpg  800w,
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg       1270w
+                      "
+                      sizes="48px"
+                      alt=""
+                      class="testimonial-profile-picture"
+                    />
+                  </div>
+                  <div class="testimonial-author-name-holder">
+                    <p class="paragraph-s no-margins">Robert Fox</p>
+                    <p class="paragraph-s job-position">CEO at Dragosh</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-holder">
+              <div class="content">
+                <p class="paragraph-m grey-text---light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Varius vel bibendum nulla leo curabitur vulputate imperdiet
+                  laoreet. Sit nam pellentesque leo quisque elit. Nibh nunc
+                  maecenas in commodo massa adipiscing feugiat. Ante velit
+                  facilisis tellus at sagittis, in felis, massa.
+                </p>
+              </div>
+              <div class="testimonial-details">
+                <div class="testimonial-author-holder">
+                  <div class="testimonial-profile-picture-container">
+                    <img
+                      src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg"
+                      loading="lazy"
+                      srcset="
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-500.jpg  500w,
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1)-p-800.jpg  800w,
+                        https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63177e221ec7aaacb9bfc_Contact%20Hero%20Image%20(1).jpg       1270w
+                      "
+                      sizes="48px"
+                      alt=""
+                      class="testimonial-profile-picture"
+                    />
+                  </div>
+                  <div class="testimonial-author-name-holder">
+                    <p class="paragraph-s no-margins">Robert Fox</p>
+                    <p class="paragraph-s job-position">CEO at Dragosh</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="section">
-      <div class="container">
-        <div class="product-cards-wrapper w-dyn-list">
-          <div role="list" class="product-grid w-dyn-items">
-            <div role="listitem" class="product-card w-dyn-item">
-              <div class="product-card-container">
-                <a
-                  href="../product/milk-hoddie"
-                  class="product-card-image-holder w-inline-block"
-                  ><img
-                    src="https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada701f8f162d9ea1766_9.jpg"
-                    loading="lazy"
-                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                    alt=""
-                    sizes="(max-width: 479px) 94vw, (max-width: 767px) 41vw, (max-width: 991px) 28vw, (max-width: 1439px) 21vw, 301.0069580078125px"
-                    srcset="
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada701f8f162d9ea1766_9-p-500.jpg 500w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada701f8f162d9ea1766_9-p-800.jpg 800w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada701f8f162d9ea1766_9.jpg       960w
-                    "
-                    class="product-card-image" /><img
-                    src="https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada6c69d4a75bfb984a1_10.jpg"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 479px) 94vw, (max-width: 767px) 41vw, (max-width: 991px) 28vw, (max-width: 1439px) 21vw, 301.0069580078125px"
-                    srcset="
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada6c69d4a75bfb984a1_10-p-500.jpg 500w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada6c69d4a75bfb984a1_10-p-800.jpg 800w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/62f3ada6c69d4a75bfb984a1_10.jpg       960w
-                    "
-                    class="secondary-product-card-image"
-                /></a>
-                <div class="product-card-details-container">
-                  <div class="product-price-container">
-                    <div class="product-name">Milk Hoddie</div>
-                    <div class="product-price">€122.50</div>
-                  </div>
-                  <div class="product-add-to-card-container">
-                    <div>
-                      <form
-                        data-node-type="commerce-add-to-cart-form"
-                        data-commerce-sku-id="62f3adb06d43f214a9184b0a"
-                        data-loading-text="Adding to cart..."
-                        data-commerce-product-id="62f3adafed2763458971966e"
-                        class="w-commerce-commerceaddtocartform"
-                      >
-                        <div
-                          data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
-                          data-commerce-product-sku-values="%7B%22f9e68d259fddd415742c88d8d870e6c9%22%3A%2222d1c47007aeeb2a0ca8dff647a36577%22%7D"
-                          data-node-type="commerce-add-to-cart-option-list"
-                          data-commerce-product-id="62f3adafed2763458971966e"
-                          data-preselect-default-variant="true"
-                          class="hide"
-                          role="group"
-                        >
-                          <div role="group">
-                            <label
-                              data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
-                              >Color</label
-                            ><select
-                              id="option-set-f9e68d259fddd415742c88d8d870e6c9"
-                              data-node-type="commerce-add-to-cart-option-select"
-                              data-commerce-option-set-id="f9e68d259fddd415742c88d8d870e6c9"
-                              class="w-select"
-                              required=""
-                            >
-                              <option selected="" value="">Select Color</option>
-                              <option value="22d1c47007aeeb2a0ca8dff647a36577">
-                                White
-                              </option>
-                              <option value="318740551cdb71deba0dfedd02dcf8ac">
-                                Black
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                        <input
-                          type="submit"
-                          data-node-type="commerce-add-to-cart-button"
-                          data-loading-text=""
-                          value="ㅤ"
-                          aria-busy="false"
-                          aria-haspopup="dialog"
-                          class="w-commerce-commerceaddtocartbutton add-to-cart-icon"
-                        /><a
-                          data-node-type="commerce-buy-now-button"
-                          data-default-text="Buy now"
-                          data-subscription-text="Subscribe now"
-                          aria-busy="false"
-                          aria-haspopup="false"
-                          style="display: none"
-                          class="w-commerce-commercebuynowbutton"
-                          href="../checkout"
-                          >Buy now</a
-                        >
-                      </form>
-                      <div
-                        tabindex="0"
-                        style="display: none"
-                        class="w-commerce-commerceaddtocartoutofstock"
-                      >
-                        <div>This product is out of stock.</div>
-                      </div>
-                      <div
-                        aria-live="assertive"
-                        data-node-type="commerce-add-to-cart-error"
-                        style="display: none"
-                        class="w-commerce-commerceaddtocarterror"
-                      >
-                        <div
-                          data-node-type="commerce-add-to-cart-error"
-                          data-w-add-to-cart-quantity-error="Product is not available in this quantity."
-                          data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
-                          data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
-                          data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
-                          data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
-                          data-w-add-to-cart-select-all-options-error="Please select an option in each set."
-                        >
-                          Product is not available in this quantity.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <div class="container _6ems">
+        <div class="w-layout-grid grid-8-col">
+          <div
+            id="w-node-_3abd6cd9-c469-465c-f261-970e527a8d55-a854ba1a"
+            class="content"
+          >
+            <div class="sticky-text-container">
+              <div class="fade-in-move-on-scroll">
+                <h3>Frequently asked questions about us</h3>
               </div>
             </div>
-            <div role="listitem" class="product-card w-dyn-item">
-              <div class="product-card-container">
-                <a
-                  href="../product/white-hoddie"
-                  class="product-card-image-holder w-inline-block"
-                  ><img
-                    src="https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c43cc4f2ba64e33807a2_bulbul-ahmed-TcRaVI3LXds-unsplash.jpg"
-                    loading="lazy"
-                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                    alt=""
-                    sizes="(max-width: 479px) 94vw, (max-width: 767px) 41vw, (max-width: 991px) 28vw, (max-width: 1439px) 21vw, 301.0069580078125px"
-                    srcset="
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c43cc4f2ba64e33807a2_bulbul-ahmed-TcRaVI3LXds-unsplash-p-500.jpg   500w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c43cc4f2ba64e33807a2_bulbul-ahmed-TcRaVI3LXds-unsplash-p-800.jpg   800w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c43cc4f2ba64e33807a2_bulbul-ahmed-TcRaVI3LXds-unsplash-p-1080.jpg 1080w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c43cc4f2ba64e33807a2_bulbul-ahmed-TcRaVI3LXds-unsplash-p-1600.jpg 1600w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c43cc4f2ba64e33807a2_bulbul-ahmed-TcRaVI3LXds-unsplash.jpg        1920w
-                    "
-                    class="product-card-image" /><img
-                    src="https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c440f4c52f7240e0379b_bulbul-ahmed-lo3pH83mFx4-unsplash.jpg"
+          </div>
+          <div
+            id="w-node-_3abd6cd9-c469-465c-f261-970e527a8d59-a854ba1a"
+            class="faq-cards-container"
+          >
+            <div class="question-card">
+              <div class="question-header-container">
+                <p class="no-margins">Lorem ipsum dolor sit amet?</p>
+                <div class="question-dropdown-holder">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6304c3743cc36cd5977a4869_Dropdown.svg"
                     loading="lazy"
                     alt=""
-                    sizes="(max-width: 479px) 94vw, (max-width: 767px) 41vw, (max-width: 991px) 28vw, (max-width: 1439px) 21vw, 301.0069580078125px"
-                    srcset="
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c440f4c52f7240e0379b_bulbul-ahmed-lo3pH83mFx4-unsplash-p-500.jpg   500w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c440f4c52f7240e0379b_bulbul-ahmed-lo3pH83mFx4-unsplash-p-800.jpg   800w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c440f4c52f7240e0379b_bulbul-ahmed-lo3pH83mFx4-unsplash-p-1080.jpg 1080w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c440f4c52f7240e0379b_bulbul-ahmed-lo3pH83mFx4-unsplash-p-1600.jpg 1600w,
-                      https://assets.website-files.com/62f3a1ab50d8014c355bd831/6311c440f4c52f7240e0379b_bulbul-ahmed-lo3pH83mFx4-unsplash.jpg        1920w
-                    "
-                    class="secondary-product-card-image"
-                /></a>
-                <div class="product-card-details-container">
-                  <div class="product-price-container">
-                    <div class="product-name">White Hoddie</div>
-                    <div class="product-price">€49.50</div>
-                  </div>
-                  <div class="product-add-to-card-container">
-                    <div>
-                      <form
-                        data-node-type="commerce-add-to-cart-form"
-                        data-commerce-sku-id="62f3ad29d36866185053d98e"
-                        data-loading-text="Adding to cart..."
-                        data-commerce-product-id="62f3ad2850d801e1f55c57a9"
-                        class="w-commerce-commerceaddtocartform"
-                      >
-                        <div
-                          data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
-                          data-commerce-product-sku-values="%7B%2201a64a70e23b4a7e0324547dcf681614%22%3A%2255dc543425cac05602128b34f7883921%22%7D"
-                          data-node-type="commerce-add-to-cart-option-list"
-                          data-commerce-product-id="62f3ad2850d801e1f55c57a9"
-                          data-preselect-default-variant="true"
-                          class="hide"
-                          role="group"
-                        >
-                          <div role="group">
-                            <label
-                              data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
-                              >Size</label
-                            ><select
-                              id="option-set-01a64a70e23b4a7e0324547dcf681614"
-                              data-node-type="commerce-add-to-cart-option-select"
-                              data-commerce-option-set-id="01a64a70e23b4a7e0324547dcf681614"
-                              class="w-select"
-                              required=""
-                            >
-                              <option selected="" value="">Select Size</option>
-                              <option value="55dc543425cac05602128b34f7883921">
-                                Big
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-                        <input
-                          type="submit"
-                          data-node-type="commerce-add-to-cart-button"
-                          data-loading-text=""
-                          value="ㅤ"
-                          aria-busy="false"
-                          aria-haspopup="dialog"
-                          class="w-commerce-commerceaddtocartbutton add-to-cart-icon"
-                        /><a
-                          data-node-type="commerce-buy-now-button"
-                          data-default-text="Buy now"
-                          data-subscription-text="Subscribe now"
-                          aria-busy="false"
-                          aria-haspopup="false"
-                          style="display: none"
-                          class="w-commerce-commercebuynowbutton"
-                          href="../checkout"
-                          >Buy now</a
-                        >
-                      </form>
-                      <div
-                        tabindex="0"
-                        style="display: none"
-                        class="w-commerce-commerceaddtocartoutofstock"
-                      >
-                        <div>This product is out of stock.</div>
-                      </div>
-                      <div
-                        aria-live="assertive"
-                        data-node-type="commerce-add-to-cart-error"
-                        style="display: none"
-                        class="w-commerce-commerceaddtocarterror"
-                      >
-                        <div
-                          data-node-type="commerce-add-to-cart-error"
-                          data-w-add-to-cart-quantity-error="Product is not available in this quantity."
-                          data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
-                          data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
-                          data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
-                          data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
-                          data-w-add-to-cart-select-all-options-error="Please select an option in each set."
-                        >
-                          Product is not available in this quantity.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    class="drop-down"
+                  />
                 </div>
+              </div>
+              <div class="answer-holder">
+                <p class="paragraph-m answer">
+                  Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel
+                  augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                  Etiam rhoncus. Maecenas tempus, tellus eget.
+                </p>
+              </div>
+            </div>
+            <div class="question-card">
+              <div class="question-header-container">
+                <p class="no-margins">Lorem ipsum dolor sit amet?</p>
+                <div class="question-dropdown-holder">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6304c3743cc36cd5977a4869_Dropdown.svg"
+                    loading="lazy"
+                    alt=""
+                    class="drop-down"
+                  />
+                </div>
+              </div>
+              <div class="answer-holder">
+                <p class="paragraph-m answer">
+                  Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel
+                  augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                  Etiam rhoncus. Maecenas tempus, tellus eget.
+                </p>
+              </div>
+            </div>
+            <div class="question-card">
+              <div class="question-header-container">
+                <p class="no-margins">Lorem ipsum dolor sit amet?</p>
+                <div class="question-dropdown-holder">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6304c3743cc36cd5977a4869_Dropdown.svg"
+                    loading="lazy"
+                    alt=""
+                    class="drop-down"
+                  />
+                </div>
+              </div>
+              <div class="answer-holder">
+                <p class="paragraph-m answer">
+                  Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel
+                  augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                  Etiam rhoncus. Maecenas tempus, tellus eget.
+                </p>
+              </div>
+            </div>
+            <div class="question-card">
+              <div class="question-header-container">
+                <p class="no-margins">Lorem ipsum dolor sit amet?</p>
+                <div class="question-dropdown-holder">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6304c3743cc36cd5977a4869_Dropdown.svg"
+                    loading="lazy"
+                    alt=""
+                    class="drop-down"
+                  />
+                </div>
+              </div>
+              <div class="answer-holder">
+                <p class="paragraph-m answer">
+                  Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel
+                  augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                  Etiam rhoncus. Maecenas tempus, tellus eget.
+                </p>
+              </div>
+            </div>
+            <div class="question-card">
+              <div class="question-header-container">
+                <p class="no-margins">Lorem ipsum dolor sit amet?</p>
+                <div class="question-dropdown-holder">
+                  <img
+                    src="https://assets.website-files.com/62f3719eed276382ac6eeb38/6304c3743cc36cd5977a4869_Dropdown.svg"
+                    loading="lazy"
+                    alt=""
+                    class="drop-down"
+                  />
+                </div>
+              </div>
+              <div class="answer-holder">
+                <p class="paragraph-m answer">
+                  Quisque rutrum. Aenean imperdi. Etiam ultricies nisi vel
+                  augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                  Etiam rhoncus. Maecenas tempus, tellus eget.
+                </p>
               </div>
             </div>
           </div>
@@ -1219,7 +1348,7 @@
                     data-name="Newsletter Email"
                     method="get"
                     class="newsletter-form"
-                    data-wf-page-id="62f3a1ab50d80185f25bd842"
+                    data-wf-page-id="63036f19271cd822a854ba1a"
                     data-wf-element-id="6bb5aeaf-6b14-3c04-4aac-2b4453187d42"
                   >
                     <div class="fade-in-move-on-scroll _100width">
@@ -1410,7 +1539,7 @@
             class="fade-in-move-on-scroll"
           >
             <div class="footer-shops-container">
-              <a href="../products" class="footer-mark-holder w-inline-block"
+              <a href="products" class="footer-mark-holder w-inline-block"
                 ><img
                   src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f3805650d8015bc35a48ec_Mark%20White.svg"
                   loading="lazy"
@@ -1433,7 +1562,7 @@
                 </h3>
               </div>
               <div class="top-margin-l">
-                <a href="../contact" class="button footer-button w-button"
+                <a href="contact" class="button footer-button w-button"
                   >FIND SHOPS</a
                 >
               </div>
@@ -1446,9 +1575,8 @@
                 <div role="listitem" class="w-dyn-item">
                   <div class="fade-in-move-on-scroll">
                     <a
-                      href="hoodies"
-                      aria-current="page"
-                      class="link-block footer-link w-inline-block w--current"
+                      href="category/hoodies"
+                      class="link-block footer-link w-inline-block"
                       ><div>Hoodies</div></a
                     >
                   </div>
@@ -1456,7 +1584,7 @@
                 <div role="listitem" class="w-dyn-item">
                   <div class="fade-in-move-on-scroll">
                     <a
-                      href="sweatshirts"
+                      href="category/sweatshirts"
                       class="link-block footer-link w-inline-block"
                       ><div>Sweatshirts</div></a
                     >
@@ -1465,7 +1593,7 @@
                 <div role="listitem" class="w-dyn-item">
                   <div class="fade-in-move-on-scroll">
                     <a
-                      href="shirts"
+                      href="category/shirts"
                       class="link-block footer-link w-inline-block"
                       ><div>Shirts</div></a
                     >
@@ -1474,7 +1602,7 @@
                 <div role="listitem" class="w-dyn-item">
                   <div class="fade-in-move-on-scroll">
                     <a
-                      href="t-shirts"
+                      href="category/t-shirts"
                       class="link-block footer-link w-inline-block"
                       ><div>T-Shirts</div></a
                     >
@@ -1483,7 +1611,7 @@
                 <div role="listitem" class="w-dyn-item">
                   <div class="fade-in-move-on-scroll">
                     <a
-                      href="jackets"
+                      href="category/jackets"
                       class="link-block footer-link w-inline-block"
                       ><div>Jackets</div></a
                     >
@@ -1495,31 +1623,30 @@
           <div class="fade-in-move-on-scroll">
             <h2 class="footer-heading">Company</h2>
             <div class="fade-in-move-on-scroll">
-              <a href="../about" class="link-block footer-link w-inline-block"
+              <a
+                href="about"
+                aria-current="page"
+                class="link-block footer-link w-inline-block w--current"
                 ><div>About</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
-              <a href="../blog" class="link-block footer-link w-inline-block"
+              <a href="blog" class="link-block footer-link w-inline-block"
                 ><div>Blog</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
-              <a href="../contact" class="link-block footer-link w-inline-block"
+              <a href="contact" class="link-block footer-link w-inline-block"
                 ><div>Contact</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
-              <a
-                href="../guarantee"
-                class="link-block footer-link w-inline-block"
+              <a href="guarantee" class="link-block footer-link w-inline-block"
                 ><div>Guarantee</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
-              <a
-                href="../shipping"
-                class="link-block footer-link w-inline-block"
+              <a href="shipping" class="link-block footer-link w-inline-block"
                 ><div>Shipping</div></a
               >
             </div>
@@ -1528,28 +1655,28 @@
             <h2 class="footer-heading">Support</h2>
             <div class="fade-in-move-on-scroll">
               <a
-                href="../template/style-guide"
+                href="template/style-guide"
                 class="link-block footer-link w-inline-block"
                 ><div>Style Guide</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
               <a
-                href="../template/licensing"
+                href="template/licensing"
                 class="link-block footer-link w-inline-block"
                 ><div>Licensing</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
               <a
-                href="../template/change-log"
+                href="template/change-log"
                 class="link-block footer-link w-inline-block"
                 ><div>Change log</div></a
               >
             </div>
             <div class="fade-in-move-on-scroll">
               <a
-                href="../template/instructions"
+                href="template/instructions"
                 class="link-block footer-link w-inline-block"
                 ><div>Instructions</div></a
               >
