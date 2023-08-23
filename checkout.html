@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://www.webflow.com --><!-- Last Published: Thu Jan 26 2023 13:43:39 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="az-milano.webflow.io" data-wf-page="62f3a1ab50d801e4325bd84a"
   data-wf-site="62f3719eed276382ac6eeb38">
 
+
 <head>
   <meta charset="utf-8" />
-  <title>Milano - Webflow Ecommerce website template</title>
-  <meta content="Milano - Webflow Ecommerce website template" name="description" />
-  <meta content="Milano - Webflow Ecommerce website template" property="og:title" />
-  <meta content="Milano - Webflow Ecommerce website template" property="og:description" />
-  <meta content="Milano - Webflow Ecommerce website template" property="twitter:title" />
-  <meta content="Milano - Webflow Ecommerce website template" property="twitter:description" />
+  <title>Weebies Hub - Checkout</title>
+  <meta
+    content="Discover the ultimate hub for anime lovers at Weebies. Shop our collection of unique anime clothes, including t-shirts, shirts, pants, and more. Embrace your inner otaku with our Japanese-inspired designs."
+    name="description" />
+  <meta content="Weebies Hub: Anime Clothes & Japanese Fashion | Shop Now" property="og:title" />
+  <meta
+    content="Discover the ultimate hub for anime lovers at Weebies. Shop our collection of unique anime clothes, including t-shirts, shirts, pants, and more. Embrace your inner otaku with our Japanese-inspired designs."
+    property="og:description" />
+  <meta content="Weebies Hub: Anime Clothes & Japanese Fashion | Shop Now" property="twitter:title" />
+  <meta
+    content="Discover the ultimate hub for anime lovers at Weebies. Shop our collection of unique anime clothes, including t-shirts, shirts, pants, and more. Embrace your inner otaku with our Japanese-inspired designs."
+    property="twitter:description" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -27,15 +33,13 @@
         (n.className += t + "touch");
     })(window, document);
   </script>
-  <link href="https://assets.website-files.com/62f3719eed276382ac6eeb38/6308bfbd58a86c19c60eae1f_Favicon.png"
-    rel="shortcut icon" type="image/x-icon" />
-  <link href="https://assets.website-files.com/62f3719eed276382ac6eeb38/6308bfc2aa84e67999377b61_webclip.png"
-    rel="apple-touch-icon" />
+  <link href=favicon/favicon.ico rel="shortcut icon" type="image/x-icon" />
+  <link href=favicon/favicon.ico rel="apple-touch-icon" />
   <script type="text/javascript">
     window.__WEBFLOW_CURRENCY_SETTINGS = {
-      currencyCode: "USD",
+      currencyCode: "INR",
       $init: true,
-      symbol: "$",
+      symbol: "₹",
       decimal: ".",
       fractionDigits: 2,
       group: ",",
@@ -45,7 +49,6 @@
     };
   </script>
 </head>
-
 <body class="white-body">
   <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="all"
     role="banner" data-no-scroll="1" data-duration="0" data-doc-height="1">
@@ -53,9 +56,9 @@
       <div class="nav-menu-container">
         <div class="navbar-menu-holder">
           <a href="index.html" class="brand w-nav-brand"><img
-              src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f3783543f2596bab2a866a_Milano%20Logo%20Black.svg"
+              src=images/blck122x32.png
               loading="lazy" alt="" class="brand-image-black" /><img
-              src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f37835b878d65d655606f5_Milano%20Logo%20White.svg"
+              src=images\logo-122x32.png
               loading="lazy" alt="" class="brand-image-white" /></a>
           <div class="menu-button w-nav-button">
             <div data-is-ix2-target="1" class="menu-hamburger-icon" data-w-id="a31a90da-18bb-988c-bede-6f0c86a57207"
@@ -259,7 +262,7 @@
                             <div
                               data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.price%22%7D%7D%5D"
                               class="price-text">
-                              $ 0.00 USD
+                              ₹ 0.00 INR
                             </div>
                             <div class="quantity-container">
                               <div class="quantity-text">Quantity:</div>
@@ -373,7 +376,7 @@
                       <div aria-live="polite" aria-label="This cart is empty">
                         No items found.
                       </div>
-                      <a href="products" class="button w-button">GO SEE PRODUCTS</a>
+                      <a href="products.html" class="button w-button">GO SEE PRODUCTS</a>
                     </div>
                     <div aria-live="assertive" style="display: none" data-node-type="commerce-cart-error"
                       class="w-commerce-commercecarterrorstate error-state">
@@ -399,7 +402,7 @@
                 <div class="w-dyn-list">
                   <div role="list" class="w-dyn-items">
                     <div role="listitem" class="w-dyn-item">
-                      <a href="category/hoodies" class="nav-link w-inline-block">
+                      <a href="category/hoodies.html" class="nav-link w-inline-block">
                         <div class="nav-link-container-perspective">
                           <div class="nav-link-container _01">
                             <div class="number-holder">
@@ -423,7 +426,7 @@
                       </a>
                     </div>
                     <div role="listitem" class="w-dyn-item">
-                      <a href="category/sweatshirts" class="nav-link w-inline-block">
+                      <a href="category/sweatshirts.html" class="nav-link w-inline-block">
                         <div class="nav-link-container-perspective">
                           <div class="nav-link-container _01">
                             <div class="number-holder">
@@ -447,7 +450,7 @@
                       </a>
                     </div>
                     <div role="listitem" class="w-dyn-item">
-                      <a href="category/shirts" class="nav-link w-inline-block">
+                      <a href="category/shirts.html" class="nav-link w-inline-block">
                         <div class="nav-link-container-perspective">
                           <div class="nav-link-container _01">
                             <div class="number-holder">
@@ -471,7 +474,7 @@
                       </a>
                     </div>
                     <div role="listitem" class="w-dyn-item">
-                      <a href="category/t-shirts" class="nav-link w-inline-block">
+                      <a href="category/t-shirts.html" class="nav-link w-inline-block">
                         <div class="nav-link-container-perspective">
                           <div class="nav-link-container _01">
                             <div class="number-holder">
@@ -495,7 +498,7 @@
                       </a>
                     </div>
                     <div role="listitem" class="w-dyn-item">
-                      <a href="category/jackets" class="nav-link w-inline-block">
+                      <a href="category/jackets.html" class="nav-link w-inline-block">
                         <div class="nav-link-container-perspective">
                           <div class="nav-link-container _01">
                             <div class="number-holder">
@@ -525,13 +528,12 @@
                 <div class="nav-menu-footer-line"></div>
                 <div class="nav-menu-links-container">
                   <div class="links-holder">
-                    <a href="mailto:hello@milano.clothes" class="nav-menu-footer-links"><span
-                        class="accent-text-color">E: </span>hello@milano.clothes</a><a href="tel:+383(0)49123-456"
-                      class="nav-menu-footer-links"><span class="accent-text-color">T: </span>+383 (0) 49
-                      123-456</a>
+                    <a href="mailto:weebieshub@gmail.com" class="nav-menu-footer-links"><span
+                        class="accent-text-color">E: </span>weebieshub@gmail.com</a><a href="tel:+919345541827"
+                      class="nav-menu-footer-links"><span class="accent-text-color">T: </span>+91 93455 41827</a>
                   </div>
                   <div class="social-media-container">
-                    <a href="http://youtube.com" target="_blank" class="social-media-holder w-inline-block"><img
+                    <a href="https://www.youtube.com/@weeb_talks" target="_blank" class="social-media-holder w-inline-block"><img
                         src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63dbb9a68a40f783acf2c_youtube%20%20-%20Gold.svg"
                         loading="lazy" alt="" class="social-media-icon" /></a><a href="http://facebook.com"
                       target="_blank" class="social-media-holder w-inline-block"><img
@@ -539,7 +541,7 @@
                         loading="lazy" alt="" class="social-media-icon" /></a><a href="http://twitter.com"
                       target="_blank" class="social-media-holder w-inline-block"><img
                         src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63dbc0a419276cd2c24c0_twitter%20%20-%20Gold.svg"
-                        loading="lazy" alt="" class="social-media-icon" /></a><a href="http://instagram.com"
+                        loading="lazy" alt="" class="social-media-icon" /></a><a href="https://www.instagram.com/weebieshub/"
                       target="_blank" class="social-media-holder w-inline-block"><img
                         src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63dbce791786f77dc96b9_instagram%20%20-%20Gold.svg"
                         loading="lazy" alt="" class="social-media-icon" /></a>
@@ -1097,7 +1099,7 @@
                   </div>
                   <div
                     data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.availableShippingMethods%5B%5D.price%22%7D%7D%5D">
-                    $ 0.00 USD
+                    ₹ 0.00 INR
                   </div>
                 </label>
               </div>
@@ -1460,7 +1462,7 @@
                 <div role="listitem" class="w-commerce-commercecheckoutorderitem order-item">
                   <img
                     data-wf-bindings="%5B%7B%22src%22%3A%7B%22type%22%3A%22ImageRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_main_image_4dr%22%7D%7D%5D"
-                    src="checkout" alt="" class="w-commerce-commercecartitemimage checkout-image w-dyn-bind-empty" />
+                    src="checkout.html" alt="" class="w-commerce-commercecartitemimage checkout-image w-dyn-bind-empty" />
                   <div class="w-commerce-commercecheckoutorderitemdescriptionwrapper div-block-3">
                     <div
                       data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_name_%22%7D%7D%5D"
@@ -1491,7 +1493,7 @@
                   <div
                     data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.rowTotal%22%7D%7D%5D"
                     class="price-checkout">
-                    $ 0.00 USD
+                    ₹ 0.00 INR
                   </div>
                 </div>
               </div>
@@ -1577,7 +1579,7 @@
                     <div
                       data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.extraItems%5B%5D.price%22%7D%7D%5D"
                       class="final-price-text">
-                      $ 0.00 USD
+                      ₹ 0.00 INR
                     </div>
                   </div>
                 </div>
