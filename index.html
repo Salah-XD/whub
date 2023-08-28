@@ -16,7 +16,7 @@
   <meta
     content="Discover the ultimate hub for anime lovers at Weebies. Shop our collection of unique anime clothes, including t-shirts, shirts, pants, and more. Embrace your inner otaku with our Japanese-inspired designs."
     property="twitter:description" />
-    <script src="https://kit.fontawesome.com/95346ea11f.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/95346ea11f.js" crossorigin="anonymous"></script>
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -305,6 +305,83 @@
 </head>
 
 <body>
+  <!-- -----------login reg begin----------------- -->
+
+  <div class="lrpopup">
+    <div class="lrpopupinner">
+      <div class="lrpopupcontent">
+
+        <a href="javascript:void();" class="close_lrpopup"><span class="fa-solid fa-times"></span></a>
+
+        <div class="lrblockwrap">
+
+
+          <div class="loginblock lrblock">
+            <h3>Login</h3>
+            <p>Enter Your Login Details Below</p>
+            <div class="formwrap">
+              <form onsubmit="login()" method="post" action="#" id="loginform">
+                <fieldset>
+                  <input type="email" name="username" placeholder="Email" autocomplete="off" id="login__email" required>
+                </fieldset>
+                <fieldset>
+                  <input type="password" name="password" placeholder="Password" id="login__password" autocomplete="off"
+                    required>
+                </fieldset>
+                <a href="javascript:void();" class="register_btn fp">Dont have an account ? -
+                  SignUp</a>
+                <button type="submit">
+                  Login <span class="fa-solid fa-angle-right"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!--loginblock-->
+
+
+
+          <div class="registerblock lrblock">
+            <h3>Register</h3>
+            <p>Enter Details Below for Sign Up</p>
+            <div class="formwrap">
+              <form method="post" action="#" id="signupform">
+                <fieldset>
+                  <input type="text" name="name" placeholder="Name*" autocomplete="off" required>
+                </fieldset>
+                <fieldset>
+                  <input type="email" name="email" placeholder="Email Address*" autocomplete="off" required>
+                </fieldset>
+
+                <fieldset>
+                  <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+                </fieldset>
+                <fieldset>
+                  <input type="password" name="confirmpassword" placeholder="Confirm Password" autocomplete="off"
+                    required>
+                </fieldset>
+                <a href="javascript:void();" class="login_btn fp">Already have an Account ? -
+                  LogIn</a>
+                <button>
+                  Sign Up <span class="fa-solid fa-angle-right"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!--Registerblock-->
+        </div>
+        <!--lrblockwrap-->
+
+
+
+      </div>
+      <!--lrblockwrap-->
+    </div>
+    <!--lrpopupinner-->
+  </div>
+  <!--lrpopup-->
+
+  <!-- =================ends here================ -->
+
   <div data-w-id="0822006c-364b-ff71-7102-f629c8b2c373" style="opacity: 1" class="fixed-navbar">
     <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="all"
       role="banner" data-no-scroll="1" data-duration="0" data-doc-height="1">
@@ -780,11 +857,12 @@
                       <a href="https://www.youtube.com/@weeb_talks/" target="_blank"
                         class="social-media-holder w-inline-block"><img
                           src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63dbb9a68a40f783acf2c_youtube%20%20-%20Gold.svg"
-                          loading="lazy" alt="" class="social-media-icon" /></a><a href="https://www.linkedin.com/company/weebies-hub/"
-                        target="_blank" class="social-media-holder w-inline-block"><img
-                          src="images/goldlinkedin.png" style="color: #BF8C4E;"
-                          loading="lazy" alt="" class="social-media-icon" /></a><a href="http://twitter.com/weebieshub"
-                        target="_blank" class="social-media-holder w-inline-block"><img
+                          loading="lazy" alt="" class="social-media-icon" /></a><a
+                        href="https://www.linkedin.com/company/weebies-hub/" target="_blank"
+                        class="social-media-holder w-inline-block"><img src="images/goldlinkedin.png"
+                          style="color: #BF8C4E;" loading="lazy" alt="" class="social-media-icon" /></a><a
+                        href="http://twitter.com/weebieshub" target="_blank"
+                        class="social-media-holder w-inline-block"><img
                           src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f63dbc0a419276cd2c24c0_twitter%20%20-%20Gold.svg"
                           loading="lazy" alt="" class="social-media-icon" /></a><a
                         href="https://www.instagram.com/weebieshub/" target="_blank"
@@ -2523,9 +2601,9 @@
         </div>
         <div class="fade-in-move-on-scroll">
           <div class="footer-social-media-container">
-            <a href="https://www.linkedin.com/company/weebies-hub/"
-              target="_blank" class="footer-social-media-holder w-inline-block"><img
-                src="images/linkedin.png" style="color: rgb(230, 218, 218); font-size: 21px;"></a><a href="http://twitter.com/weebieshub"
+            <a href="https://www.linkedin.com/company/weebies-hub/" target="_blank"
+              class="footer-social-media-holder w-inline-block"><img src="images/linkedin.png"
+                style="color: rgb(230, 218, 218); font-size: 21px;"></a><a href="http://twitter.com/weebieshub"
               target="_blank" class="footer-social-media-holder w-inline-block"><img
                 src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f37e6264f6ebbe04233a8b_twitter.svg"
                 loading="lazy" alt="" class="footer-social-media-icon" /></a><a
