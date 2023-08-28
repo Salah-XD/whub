@@ -9,16 +9,6 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 function login() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .catch((error) => {
-      document.getElementById("error").innerHTML = error.message;
-      document.getElementById("error2").innerHTML = error.message;
-    });
-
   // ----captcha.js----
 
   document
@@ -32,6 +22,15 @@ function login() {
       } else {
         //need to code
       }
+    });
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .catch((error) => {
+      document.getElementById("error").innerHTML = error.message;
+      document.getElementById("error2").innerHTML = error.message;
     });
 }
 
