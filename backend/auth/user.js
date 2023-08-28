@@ -18,7 +18,7 @@ function login() {
 
       if (!recaptchaResponse) {
         event.preventDefault();
-        alert("Please complete the reCAPTCHA.");
+        // alert("Please complete the reCAPTCHA.");
         document.getElementById("error").innerHTML =
           "Please click i'm not a robot";
       } else {
