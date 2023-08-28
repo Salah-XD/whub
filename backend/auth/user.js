@@ -9,20 +9,6 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 function login() {
-  // ----captcha.js----
-
-  document
-    .getElementById("loginForm")
-    .addEventListener("submit", function (event) {
-      var recaptchaResponse = grecaptcha.getResponse();
-
-      if (!recaptchaResponse) {
-        event.preventDefault();
-        alert("Please complete the reCAPTCHA.");
-      } else {
-        //need to code
-      }
-    });
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   firebase
@@ -31,6 +17,21 @@ function login() {
     .catch((error) => {
       document.getElementById("error").innerHTML = error.message;
       document.getElementById("error2").innerHTML = error.message;
+    });
+
+  // ----captcha.js----
+
+  document
+    .getElementById("log_btn")
+    .addEventListener("onclick", function (event) {
+      var recaptchaResponse = grecaptcha.getResponse();
+
+      if (!recaptchaResponse) {
+        event.preventDefault();
+        alert("Please complete the reCAPTCHA.");
+      } else {
+        //need to code
+      }
     });
 }
 
