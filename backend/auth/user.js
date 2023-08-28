@@ -23,7 +23,7 @@ function login() {
 
   document
     .getElementById("log_btn")
-    .addEventListener("onclick", function (event) {
+    .addEventListener("click", function (event) {
       var recaptchaResponse = grecaptcha.getResponse();
 
       if (!recaptchaResponse) {
