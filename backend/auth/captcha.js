@@ -5,7 +5,7 @@ document
 
     if (!recaptchaResponse) {
       event.preventDefault();
-      alert("Please complete the reCAPTCHA.");
+      //   alert("Please complete the reCAPTCHA.");
     } else {
       //need to code
     }
