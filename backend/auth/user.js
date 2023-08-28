@@ -18,6 +18,21 @@ function login() {
       document.getElementById("error").innerHTML = error.message;
       document.getElementById("error2").innerHTML = error.message;
     });
+
+  // ----captcha.js----
+
+  document
+    .getElementById("loginForm")
+    .addEventListener("submit", function (event) {
+      var recaptchaResponse = grecaptcha.getResponse();
+
+      if (!recaptchaResponse) {
+        event.preventDefault();
+        alert("Please complete the reCAPTCHA.");
+      } else {
+        //need to code
+      }
+    });
 }
 
 function signUp() {
