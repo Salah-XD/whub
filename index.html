@@ -329,7 +329,7 @@
             <h3>Login</h3>
             <p>Enter Your Login Details Below</p>
             <div class="formwrap">
-              <form onsubmit="login()" method="post" action="#" id="loginform">
+              <form method="post" action="#" id="loginform">
                 <center><small><span id="error" style="color: red;"></span></small></center>
                 <fieldset>
                   <input style="margin-top: 20px;" type="email" name="username" placeholder="Email" autocomplete="off"
@@ -342,7 +342,7 @@
                 <a href="#" onclick="forgotPass()">Forgot Password ?</a>
 
 
-                <button type="submit" style="margin: 30px 0;">
+                <button onclick="login()" type="submit" style="margin: 30px 0;">
                   Login <span class="fa-solid fa-angle-right"></span>
                 </button>
                 <a href="javascript:void();" class="register_btn fp">Dont have an account ? -
