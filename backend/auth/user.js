@@ -23,9 +23,15 @@ function login() {
 function signUp() {
   const email = document.getElementById("regemail").value;
   const password = document.getElementById("regpassword").value;
+  const name = document.getElementById("name").value;
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
+    .then(function (result) {
+      return result.user.updateProfile({
+        displayName: name,
+      });
+    })
     .catch((error) => {
       document.getElementById("error2").innerHTML = error.message;
     });
