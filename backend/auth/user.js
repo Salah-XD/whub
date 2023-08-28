@@ -22,8 +22,8 @@ function login() {
   // ----captcha.js----
 
   document
-    .getElementById("log_btn")
-    .addEventListener("click", function (event) {
+    .getElementById("loginForm")
+    .addEventListener("submit", function (event) {
       var recaptchaResponse = grecaptcha.getResponse();
 
       if (!recaptchaResponse) {
