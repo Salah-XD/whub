@@ -16,17 +16,18 @@ function login() {
     .signInWithEmailAndPassword(email, password)
     .catch((error) => {
       document.getElementById("error").innerHTML = error.message;
+      document.getElementById("error2").innerHTML = error.message;
     });
 }
 
 function signUp() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("regemail").value;
+  const password = document.getElementById("regpassword").value;
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .catch((error) => {
-      document.getElementById("error").innerHTML = error.message;
+      document.getElementById("error2").innerHTML = error.message;
     });
 }
 
