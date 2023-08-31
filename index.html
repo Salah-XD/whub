@@ -23,6 +23,9 @@
   <meta content="Webflow" name="generator" />
   <link href="CSS/style.css" rel="stylesheet" type="text/css" />
   <link href="CSS/auth.css" rel="stylesheet" type="text/css" />
+  <link href="CSS/country.css" rel="stylesheet" type="text/css" />
+  <link href="CSS/otp.css" rel="stylesheet" type="text/css" />
+  <link href="CSS/csearch.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
@@ -30,6 +33,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <style>
     @media (min-width: 992px) {
@@ -359,10 +364,10 @@
 
 
 
-          <div class="registerblock lrblock">
+          <div class="registerblock lrblock " style="position: relative; height: 500px;">
             <h3>Register</h3>
             <p>Enter Details Below for Sign Up</p>
-            <div class="formwrap">
+            <div class="formwrap" id="reg" style="position: absolute;">
               <form id="loginForm" method="post" action="#" id="signupform">
                 <center><small><span id="error2" style="color: red;"></span></small></center>
 
@@ -386,10 +391,88 @@
 
                 <a href="javascript:void();" class="login_btn fp">Already have an Account ? -
                   LogIn</a>
-                <button type="button" onclick="signUp()">
+                <button type="button" onclick="signUp();phno();">
                   Sign Up <span class="fa-solid fa-angle-right"></span>
                 </button>
               </form>
+            </div>
+            <div class="formwrap" id="phno" style="position: absolute;left: 120%;">
+              <form method="post" action="#">
+                <fieldset>
+
+                </fieldset>
+
+                <div class="pn-select" id="js_pn-select" style="--prefix-length: 2">
+                  <!-- Selected prefix -->
+                  <a class="pn-selected-prefix" aria-label="Select phonenumber prefix" id="js_trigger-dropdown"
+                    tabindex="1">
+                    <img class="pn-selected-prefix__flag" id="js_selected-flag"
+                      src="https://flagpedia.net/data/flags/icon/36x27/in.png" />
+                    <!-- prettier-ignore -->
+                    <svg class="pn-selected-prefix__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 24 24" fill="none" stroke="#081626" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </a>
+                  <!-- Phone number input -->
+                  <div class="pn-input">
+                    <label class="pn-input__label">Phonenumber*</label>
+                    <div class="pn-input__container">
+                      <input class="pn-input__prefix" value="+91" type="text" name="phonenumber-prefix"
+                        id="js_number-prefix" tabindex="-1" />
+                      <input class="pn-input__phonenumber" id="js_input-phonenumber" type="tel" name="phonenumber"
+                        pattern="\d*" value="" placeholder=" " autocomplete="nope" required max="10" tabindex="0" />
+                      <small class="pn-input__error">
+                        This is not a valid phone number
+                      </small>
+                    </div>
+                  </div>
+                  <!-- Dropdown -->
+                  <div class="pn-dropdown" id="js_dropdown">
+                    <div class="pn-search">
+                      <!-- prettier-ignore -->
+                      <svg class="pn-search__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="#103155" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      </svg>
+                      <input placeholder="Search for countries" class="pn-search__input search" type="search"
+                        id="js_search-input" autocomplete="nope" />
+                    </div>
+                    <!-- Country list -->
+                    <ul class="pn-list list" id="js_list"></ul>
+                    <div class="pn-list-item pn-list-item--no-results" style="display: none" id="js_no-results-found">
+                      No results found
+                    </div>
+                  </div>
+                </div>
+                <button>
+                  Send OTP <span class="fa-solid fa-angle-right"></span>
+                </button>
+
+                <fieldset style="margin-top: 30px;">
+                  <div class="otp-field">
+                    <input type="number" id="digit1" oninput="verifyOTP()" />
+                    <input type="number" disabled id="digit2" oninput="verifyOTP()" />
+                    <input type="number" disabled id="digit3" oninput="verifyOTP()" />
+                    <input type="number" disabled id="digit4" oninput="verifyOTP()" />
+
+                  </div>
+                  <button class="btn btn-primary mb-3" style="display: none;">
+                    Verify
+                  </button>
+
+                </fieldset>
+                <a href="javascript:void();" class="login_btn fp">Code not Recieved yet ? -
+                  Request Again</a>
+                <button>
+                  Sign Up <span class="fa-solid fa-angle-right"></span>
+                </button>
+
+              </form>
+
             </div>
           </div>
           <!--Registerblock-->
@@ -2678,6 +2761,9 @@
     <div class="footer-bg-color"></div>
   </div>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js'></script>
+
+
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=62f3719eed276382ac6eeb38"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
@@ -2690,6 +2776,8 @@
 
   <script src="backend/auth/firebase.js"></script>
   <script src="backend/auth/user.js"></script>
+  <script src="backend/auth/otp.js"></script>
+  <script src="backend/auth/country.js"></script>
   <!-- <script src="backend/auth/captcha.js"></script> -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 

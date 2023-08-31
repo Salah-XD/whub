@@ -19,3 +19,9 @@ $(document).ready(function () {
     $("a.login_btn").removeClass("active");
   });
 });
+let x = document.getElementById("reg");
+let y = document.getElementById("phno");
+function phno() {
+  x.style.left = "-120%";
+  y.style.left = "-0%";
+}

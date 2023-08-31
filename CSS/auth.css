@@ -27,6 +27,7 @@
   flex-wrap: wrap;
   margin: auto;
   position: relative;
+  overflow: hidden;
 }
 .lrblockwrap {
   padding: 60px 80px 80px 80px;
@@ -57,6 +58,7 @@ a.close_lrpopup {
   width: 100%;
   font-family: "Manrope";
   display: none;
+  transition: all 0.5s ease;
 }
 .lrblock h3 {
   color: #000;
@@ -75,6 +77,8 @@ a.close_lrpopup {
   width: 100%;
   display: flex;
   justify-content: center;
+  transition: all ease 0.3s;
+
   margin-top: 20px;
 }
 .lrblock form {
