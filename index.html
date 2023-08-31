@@ -448,7 +448,11 @@
                     </div>
                   </div>
                 </div>
-                <button>
+                <fieldset>
+                  <div class="g-recaptcha" data-sitekey="6Lc_dN8nAAAAADWf08bLu4vAJk08HAsfJ4tkWonI">
+                  </div>
+                </fieldset>
+                <button onclick="phoneAuth()" type="button">
                   Send OTP <span class="fa-solid fa-angle-right"></span>
                 </button>
 
@@ -2778,6 +2782,7 @@
   <script src="backend/auth/user.js"></script>
   <script src="backend/auth/otp.js"></script>
   <script src="backend/auth/country.js"></script>
+  <script src="backend/auth/phone.js"></script>
   <!-- <script src="backend/auth/captcha.js"></script> -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
