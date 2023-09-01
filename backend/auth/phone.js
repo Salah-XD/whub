@@ -77,7 +77,8 @@ function phoneAuth() {
     .then(function (confirmationResult) {
       // Store the confirmation result for later use
       window.confirmationResult = confirmationResult;
-      console.log(confirmationResult);
+
+      document.getElementById("error3").innerHTML = "OTP sent successfully";
     })
     .catch(function (error) {
       document.getElementById("error3").innerHTML = error.message;
