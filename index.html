@@ -398,9 +398,7 @@
             </div>
             <div class="formwrap" id="phno" style="position: absolute;left: 120%;">
               <form method="post" action="#">
-                <fieldset>
-
-                </fieldset>
+                <center><small><span id="error3" style="color: red;">hello</span></small></center>
 
                 <div class="pn-select" id="js_pn-select" style="--prefix-length: 2">
                   <!-- Selected prefix -->
@@ -448,10 +446,11 @@
                     </div>
                   </div>
                 </div>
-                <fieldset>
+                <div id="recaptcha-container"></div>
+                <!-- <fieldset>
                   <div class="g-recaptcha" data-sitekey="6Lc_dN8nAAAAADWf08bLu4vAJk08HAsfJ4tkWonI">
                   </div>
-                </fieldset>
+                </fieldset> -->
                 <button onclick="phoneAuth()" type="button">
                   Send OTP <span class="fa-solid fa-angle-right"></span>
                 </button>
