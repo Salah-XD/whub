@@ -11,4 +11,4 @@ document
     }
   });
 
-///continued on userjs
+///continued on user.js
