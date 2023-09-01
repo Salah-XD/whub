@@ -1,3 +1,5 @@
+///=====================testing=====================
+
 // function phoneAuth() {
 //   const prefix = document.getElementById("js_number-prefix").value;
 //   const number = document.getElementById("js_input-phonenumber").value;
@@ -20,6 +22,7 @@
 //     });
 // }
 
+///=====================testing2=====================
 // ///invisible recaptcha
 
 // render();
@@ -46,6 +49,8 @@
 //       alert(error.message);
 //     });
 // }
+
+//==========main code=======
 
 function phoneAuth() {
   const prefix = document.getElementById("js_number-prefix").value;
