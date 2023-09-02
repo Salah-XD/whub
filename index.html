@@ -398,7 +398,7 @@
             </div>
             <div class="formwrap" id="phno" style="position: absolute;left: 120%;">
               <form method="post" action="#">
-                <center><small><span id="error3" style="color: red;">hello</span></small></center>
+                <center><small><span id="error3" style="color: red;"></span></small></center>
 
                 <div class="pn-select" id="js_pn-select" style="--prefix-length: 2">
                   <!-- Selected prefix -->
@@ -454,8 +454,11 @@
                 <button onclick="phoneAuth()" type="button">
                   Send OTP <span class="fa-solid fa-angle-right"></span>
                 </button>
+                <fieldset>
+                  <div style="font-size: 17px; margin-top: 15px;font-weight: 600;">Enter OTP below</div>
+                </fieldset>
 
-                <fieldset style="margin-top: 30px;">
+                <fieldset style="margin-top: 5px;">
                   <div class="otp-field">
                     <input type="number" id="digit1" oninput="verifyOTP()" />
                     <input type="number" disabled id="digit2" oninput="verifyOTP()" />
@@ -470,9 +473,11 @@
                   </button>
 
                 </fieldset>
-                <a href="javascript:void();" class="login_btn fp">Code not Recieved yet ? -
-                  Request Again</a>
-                <button>
+                <fieldset>
+                  <a href="javascript:void();" onclick="phoneAuth()">Code not Recieved yet ? -
+                    Request Again</a>
+                </fieldset>
+                <button onclick="codeverify()" type="button">
                   Sign Up <span class="fa-solid fa-angle-right"></span>
                 </button>
 

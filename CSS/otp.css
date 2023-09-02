@@ -1,16 +1,18 @@
 .otp-field {
   flex-direction: row;
-  column-gap: 10px;
+  column-gap: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .otp-field input {
-  height: 45px;
-  width: 42px;
+  height: 40px;
+  width: 37px;
   border-radius: 6px;
   outline: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.052);
+
   font-size: 1.125rem;
   text-align: center;
   border: 1px solid #ddd;

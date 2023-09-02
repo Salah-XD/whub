@@ -76,14 +76,16 @@ function verifyOTP() {
   otp += document.getElementById("digit2").value;
   otp += document.getElementById("digit3").value;
   otp += document.getElementById("digit4").value;
+  otp += document.getElementById("digit5").value;
+  otp += document.getElementById("digit6").value;
 
-  if (otp.length === 4) {
+  if (otp.length === 6) {
     console.log(otp);
 
-    if (otp === "1234") {
-      alert("OTP is correct. Authentication successful!");
-    } else {
-      alert("Invalid OTP. Authentication failed!");
-    }
+    // if (otp === "1234") {
+    //   alert("OTP is correct. Authentication successful!");
+    // } else {
+    //   alert("Invalid OTP. Authentication failed!");
+    // }
   }
 }

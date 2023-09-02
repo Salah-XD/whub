@@ -77,6 +77,7 @@ function phoneAuth() {
     .then(function (confirmationResult) {
       // Store the confirmation result for later use
       window.confirmationResult = confirmationResult;
+      console.log(confirmationResult);
 
       document.getElementById("error3").innerHTML = "OTP sent successfully";
     })
@@ -98,16 +99,29 @@ function phoneAuth() {
 
 ///verification-----------
 
-function codeverify() {
-  var code = document.getElementById("verificationcode").value;
-  coderesult
-    .confirm(code)
-    .then(function () {
-      document.getElementsByClassName("p-conf")[0].style.display = "block";
-      document.getElementsByClassName("n-conf")[0].style.display = "none";
-    })
-    .catch(function () {
-      document.getElementsByClassName("p-conf")[0].style.display = "none";
-      document.getElementsByClassName("n-conf")[0].style.display = "block";
-    });
+// function codeverify() {
+//   // const otp = document.getElementById("otpInput").value; // Replace "otpInput" with your OTP input field ID
+
+//   // Use the stored confirmationResult to verify the OTP
+//   window.confirmationResult
+//     .confirm(otp)
+//     .then(function (result) {
+//       // OTP verification successful
+//       console.log("Phone number verified successfully");
+//       // You can access the authenticated user via `result.user`
+
+//       // Handle further user authentication or redirection
+//       // For example, you can redirect the user to a dashboard page
+//       // window.location.href = "/dashboard.html";
+//     })
+//     .catch(function (error) {
+//       // OTP verification failed
+//       document.getElementById("error3").innerHTML =
+//         "Invalid OTP. Please try again.";
+//       console.error(error);
+//     });
+// }
+
+function resendotp() {
+  firebase.auth().signInWithPhoneNumber(phnumber, recaptchaVerifier);
 }
