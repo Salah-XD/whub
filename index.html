@@ -333,7 +333,7 @@
           <div class="loginblock lrblock">
             <h3>Login</h3>
             <p>Enter Your Login Details Below</p>
-            <div class="formwrap">
+            <div class=" formwrap">
               <form method="post" action="#" id="loginForm">
                 <center><small><span id="error" style="color: red;"></span></small></center>
                 <fieldset>
@@ -391,9 +391,11 @@
 
                 <a href="javascript:void();" class="login_btn fp">Already have an Account ? -
                   LogIn</a>
-                <button type="button" onclick="signUp();phno();">
-                  Next <span class="fa-solid fa-angle-right"></span>
-                </button>
+                <div id="next_btn_container">
+                  <button type="button" id="next_btn" onclick="signUp();phno();">
+                    Next <span class="fa-solid fa-angle-right"></span>
+                  </button>
+                </div>
               </form>
             </div>
             <div class="formwrap" id="phno" style="position: absolute;left: 120%;">

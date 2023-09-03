@@ -4,7 +4,9 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    location.replace("welcome.html");
+    $(".loginblock").hide();
+
+    // location.replace("welcome.html");
   }
 });
 
@@ -64,3 +66,43 @@ function forgotPass() {
       document.getElementById("error").innerHTML = error.message;
     });
 }
+
+// Get references to the input fields and the Next button
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("regemail");
+const passwordInput = document.getElementById("regpassword");
+const confirmPasswordInput = document.getElementsByName("confirmpassword")[0]; // Note: Using [0] to get the first matching element
+const nextBtn = document.getElementById("next_btn");
+
+// Add an event listener to the form inputs to check for changes
+nameInput.addEventListener("input", validateForm);
+emailInput.addEventListener("input", validateForm);
+passwordInput.addEventListener("input", validateForm);
+confirmPasswordInput.addEventListener("input", validateForm);
+
+// Function to check if all required fields are filled
+function validateForm() {
+  const passwordValue = passwordInput.value.trim();
+  const confirmPasswordValue = confirmPasswordInput.value.trim();
+
+  if (
+    nameInput.value.trim() !== "" &&
+    emailInput.value.trim() !== "" &&
+    passwordInput.value.trim() !== "" &&
+    confirmPasswordInput.value.trim() !== ""
+  ) {
+    if (passwordValue !== confirmPasswordValue) {
+      document.getElementById("error2").innerHTML =
+        "Password and Confirm Password doesn't match";
+    } else {
+      document.getElementById("error2").innerHTML = "";
+    }
+    nextBtn.removeAttribute("disabled");
+  } else {
+    nextBtn.setAttribute("disabled", "disabled");
+    document.getElementById("error2").innerHTML = "Fill all the fields";
+  }
+}
+
+// Initial validation on page load
+validateForm();
