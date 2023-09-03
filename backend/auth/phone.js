@@ -75,14 +75,12 @@ function phoneAuth() {
     .auth()
     .signInWithPhoneNumber(phnumber, recaptchaVerifier)
     .then(function (confirmationResult) {
+      document.getElementById("error3").innerHTML = "OTP sent successfully";
       // Store the confirmation result for later use
       window.confirmationResult = confirmationResult;
       console.log(confirmationResult);
-
-      document.getElementById("error3").innerHTML = "OTP sent successfully";
     })
     .catch(function (error) {
-      document.getElementById("error3").innerHTML = error.message;
       console.log(error);
     });
 }
@@ -97,30 +95,22 @@ function phoneAuth() {
 //   recaptchaVerifier.render();
 // }
 
-///verification-----------
+//verification-----------
 
-// function codeverify() {
-//   // const otp = document.getElementById("otpInput").value; // Replace "otpInput" with your OTP input field ID
+function codeverify() {
+  // const otp = document.getElementById("otpInput").value; // Replace "otpInput" with your OTP input field ID
 
-//   // Use the stored confirmationResult to verify the OTP
-//   window.confirmationResult
-//     .confirm(otp)
-//     .then(function (result) {
-//       // OTP verification successful
-//       console.log("Phone number verified successfully");
-//       // You can access the authenticated user via `result.user`
-
-//       // Handle further user authentication or redirection
-//       // For example, you can redirect the user to a dashboard page
-//       // window.location.href = "/dashboard.html";
-//     })
-//     .catch(function (error) {
-//       // OTP verification failed
-//       document.getElementById("error3").innerHTML =
-//         "Invalid OTP. Please try again.";
-//       console.error(error);
-//     });
-// }
+  // Use the stored confirmationResult to verify the OTP
+  confirmationResult
+    .confirm(otp)
+    .then(function (result) {
+      // User signed in successfully.
+      console.log("Phone number verified successfully" + result.user);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
 function resendotp() {
   firebase.auth().signInWithPhoneNumber(phnumber, recaptchaVerifier);
