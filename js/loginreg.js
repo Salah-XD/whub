@@ -5,8 +5,17 @@ $(document).ready(function () {
     $(".registerblock").fadeOut();
   });
   $("a.login_btn").click(function () {
+    if (userLoggedIn) {
+      // User is logged in, show profile
+      $(".loginblock").hide();
+      $(".profileblock").fadeIn();
+    } else {
+      // User is not logged in, show login form
+      $(".loginblock").fadeIn();
+      $(".profileblock").hide();
+    }
     $(".lrpopup").fadeIn();
-    $(".loginblock").fadeIn();
+    // $(".loginblock").fadeIn();
     $(".registerblock").hide();
     $(this).addClass("active");
     $("a.register_btn").removeClass("active");

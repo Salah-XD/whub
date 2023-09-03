@@ -1,3 +1,5 @@
+let userLoggedIn = false; // Track user's login state
+
 document.getElementById("loginForm").addEventListener("submit", (event) => {
   event.preventDefault();
 });
@@ -5,8 +7,16 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     $(".loginblock").hide();
+    userLoggedIn = true;
+    $(".loginblock").hide();
+    $(".profileblock").show();
+    console.log("user logged in");
 
     // location.replace("welcome.html");
+  } else {
+    userLoggedIn = false;
+    $(".loginblock").show();
+    $(".profileblock").hide();
   }
 });
 
