@@ -40,6 +40,8 @@ function login() {
           .auth()
           .signInWithEmailAndPassword(email, password)
           .catch((error) => {
+            nextBtn.setAttribute("disabled", "disabled");
+
             document.getElementById("error").innerHTML = error.message;
             document.getElementById("error2").innerHTML = error.message;
           });
@@ -94,22 +96,6 @@ function validateForm() {
   } else {
     nextBtn.setAttribute("disabled", "disabled");
     document.getElementById("error2").innerHTML = "Fill all the fields";
-  }
-  function signUp() {
-    const email = document.getElementById("regemail").value;
-    const password = document.getElementById("regpassword").value;
-    const name = document.getElementById("name").value;
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(function (result) {
-        return result.user.updateProfile({
-          displayName: name,
-        });
-      })
-      .catch((error) => {
-        document.getElementById("error2").innerHTML = error.message;
-      });
   }
 }
 
