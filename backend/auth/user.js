@@ -40,12 +40,29 @@ function login() {
           .auth()
           .signInWithEmailAndPassword(email, password)
           .catch((error) => {
-            nextBtn.setAttribute("disabled", "disabled");
-
             document.getElementById("error").innerHTML = error.message;
             document.getElementById("error2").innerHTML = error.message;
           });
       }
+    });
+}
+
+function signUp() {
+  const email = document.getElementById("regemail").value;
+  const password = document.getElementById("regpassword").value;
+  const name = document.getElementById("name").value;
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(function (result) {
+      return result.user.updateProfile({
+        displayName: name,
+      });
+    })
+    .catch((error) => {
+      nextBtn.setAttribute("disabled", "disabled");
+
+      document.getElementById("error2").innerHTML = error.message;
     });
 }
 
@@ -90,7 +107,7 @@ function validateForm() {
       document.getElementById("error2").innerHTML =
         "Password and Confirm Password doesn't match";
     } else {
-      document.getElementById("error2").innerHTML = "";
+      document.getElementById("error2").innerHTML = null;
     }
     nextBtn.removeAttribute("disabled");
   } else {
