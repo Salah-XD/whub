@@ -84,6 +84,7 @@ function signUp() {
       document.getElementById("error2").innerHTML = "Fill all the fields";
     }
   }
+  validateForm();
 }
 
 function forgotPass() {
@@ -115,4 +116,3 @@ confirmPasswordInput.addEventListener("input", validateForm);
 // Function to check if all required fields are filled
 
 // Initial validation on page load
-validateForm();
