@@ -9,7 +9,8 @@ firebase.auth().onAuthStateChanged((user) => {
     $(".loginblock").hide();
     userLoggedIn = true;
     $(".loginblock").hide();
-    $(".profileblock").show();
+    $(".registerblock").hide();
+    // $(".profileblock").show();
     console.log("user logged in");
 
     // location.replace("welcome.html");
@@ -71,6 +72,8 @@ function signUp() {
   const email = document.getElementById("regemail").value;
   const password = document.getElementById("regpassword").value;
   const name = document.getElementById("name").value;
+  let x = document.getElementById("reg");
+  let y = document.getElementById("phno");
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
@@ -79,6 +82,11 @@ function signUp() {
         displayName: name,
       });
     })
+    .then(function () {
+      x.style.left = "-120%";
+      y.style.left = "-0%";
+    })
+
     .catch((error) => {
       nextBtn.setAttribute("disabled", "disabled");
       console.log("signup error");
@@ -113,7 +121,6 @@ function validateForm() {
         "Password and Confirm Password doesn't match";
     } else {
       document.getElementById("error2").innerHTML = null;
-      signUp();
     }
     nextBtn.removeAttribute("disabled");
   } else {
