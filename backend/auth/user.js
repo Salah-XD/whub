@@ -62,6 +62,28 @@ function signUp() {
     .catch((error) => {
       document.getElementById("error2").innerHTML = error.message;
     });
+  function validateForm() {
+    const passwordValue = passwordInput.value.trim();
+    const confirmPasswordValue = confirmPasswordInput.value.trim();
+
+    if (
+      nameInput.value.trim() !== "" &&
+      emailInput.value.trim() !== "" &&
+      passwordInput.value.trim() !== "" &&
+      confirmPasswordInput.value.trim() !== ""
+    ) {
+      if (passwordValue !== confirmPasswordValue) {
+        document.getElementById("error2").innerHTML =
+          "Password and Confirm Password doesn't match";
+      } else {
+        document.getElementById("error2").innerHTML = "";
+      }
+      nextBtn.removeAttribute("disabled");
+    } else {
+      nextBtn.setAttribute("disabled", "disabled");
+      document.getElementById("error2").innerHTML = "Fill all the fields";
+    }
+  }
 }
 
 function forgotPass() {
@@ -91,28 +113,6 @@ passwordInput.addEventListener("input", validateForm);
 confirmPasswordInput.addEventListener("input", validateForm);
 
 // Function to check if all required fields are filled
-function validateForm() {
-  const passwordValue = passwordInput.value.trim();
-  const confirmPasswordValue = confirmPasswordInput.value.trim();
-
-  if (
-    nameInput.value.trim() !== "" &&
-    emailInput.value.trim() !== "" &&
-    passwordInput.value.trim() !== "" &&
-    confirmPasswordInput.value.trim() !== ""
-  ) {
-    if (passwordValue !== confirmPasswordValue) {
-      document.getElementById("error2").innerHTML =
-        "Password and Confirm Password doesn't match";
-    } else {
-      document.getElementById("error2").innerHTML = "";
-    }
-    nextBtn.removeAttribute("disabled");
-  } else {
-    nextBtn.setAttribute("disabled", "disabled");
-    document.getElementById("error2").innerHTML = "Fill all the fields";
-  }
-}
 
 // Initial validation on page load
 validateForm();
