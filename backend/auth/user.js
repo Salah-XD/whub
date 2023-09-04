@@ -47,46 +47,6 @@ function login() {
     });
 }
 
-function signUp() {
-  const email = document.getElementById("regemail").value;
-  const password = document.getElementById("regpassword").value;
-  const name = document.getElementById("name").value;
-  firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then(function (result) {
-      return result.user.updateProfile({
-        displayName: name,
-      });
-    })
-    .catch((error) => {
-      document.getElementById("error2").innerHTML = error.message;
-    });
-  function validateForm() {
-    const passwordValue = passwordInput.value.trim();
-    const confirmPasswordValue = confirmPasswordInput.value.trim();
-
-    if (
-      nameInput.value.trim() !== "" &&
-      emailInput.value.trim() !== "" &&
-      passwordInput.value.trim() !== "" &&
-      confirmPasswordInput.value.trim() !== ""
-    ) {
-      if (passwordValue !== confirmPasswordValue) {
-        document.getElementById("error2").innerHTML =
-          "Password and Confirm Password doesn't match";
-      } else {
-        document.getElementById("error2").innerHTML = "";
-      }
-      nextBtn.removeAttribute("disabled");
-    } else {
-      nextBtn.setAttribute("disabled", "disabled");
-      document.getElementById("error2").innerHTML = "Fill all the fields";
-    }
-  }
-  validateForm();
-}
-
 function forgotPass() {
   const email = document.getElementById("email").value;
   firebase
@@ -114,5 +74,44 @@ passwordInput.addEventListener("input", validateForm);
 confirmPasswordInput.addEventListener("input", validateForm);
 
 // Function to check if all required fields are filled
+function validateForm() {
+  const passwordValue = passwordInput.value.trim();
+  const confirmPasswordValue = confirmPasswordInput.value.trim();
+
+  if (
+    nameInput.value.trim() !== "" &&
+    emailInput.value.trim() !== "" &&
+    passwordInput.value.trim() !== "" &&
+    confirmPasswordInput.value.trim() !== ""
+  ) {
+    if (passwordValue !== confirmPasswordValue) {
+      document.getElementById("error2").innerHTML =
+        "Password and Confirm Password doesn't match";
+    } else {
+      document.getElementById("error2").innerHTML = "";
+    }
+    nextBtn.removeAttribute("disabled");
+  } else {
+    nextBtn.setAttribute("disabled", "disabled");
+    document.getElementById("error2").innerHTML = "Fill all the fields";
+  }
+  function signUp() {
+    const email = document.getElementById("regemail").value;
+    const password = document.getElementById("regpassword").value;
+    const name = document.getElementById("name").value;
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(function (result) {
+        return result.user.updateProfile({
+          displayName: name,
+        });
+      })
+      .catch((error) => {
+        document.getElementById("error2").innerHTML = error.message;
+      });
+  }
+}
 
 // Initial validation on page load
+validateForm();
