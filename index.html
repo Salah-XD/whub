@@ -371,6 +371,9 @@
             </div>
           </div>
           <!--loginblock-->
+          <!-- ===================================
+          ==============================
+          =============================== -->
 
 
 
@@ -378,37 +381,6 @@
             <h3>Register</h3>
             <p>Enter Details Below for Sign Up</p>
             <div class="formwrap" id="reg" style="position: absolute;">
-              <form id="loginForm" method="post" action="#" id="signupform">
-                <center><small><span id="error2" style="color: red;"></span></small></center>
-
-                <fieldset>
-                  <input style="margin-top: 10px;" type="text" id="name" name="name" placeholder="Name*"
-                    autocomplete="off" required>
-                </fieldset>
-                <fieldset>
-                  <input type="email" name="email" placeholder="Email Address*" autocomplete="off" id="regemail"
-                    required>
-                </fieldset>
-
-                <fieldset>
-                  <input type="password" name="password" placeholder="Password" autocomplete="off" id="regpassword"
-                    required>
-                </fieldset>
-                <fieldset>
-                  <input type="password" name="confirmpassword" placeholder="Confirm Password" autocomplete="off"
-                    required>
-                </fieldset>
-
-                <a href="javascript:void();" class="login_btn fp">Already have an Account ? -
-                  LogIn</a>
-                <div id="next_btn_container">
-                  <button type="button" id="next_btn" onclick="signUp()">
-                    Next <span class="fa-solid fa-angle-right"></span>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div class="formwrap" id="phno" style="position: absolute;left: 120%;">
               <form method="post" action="#">
                 <center><small><span id="error3" style="color: red;"></span></small></center>
 
@@ -460,9 +432,9 @@
                 </div>
                 <div id="recaptcha-container"></div>
                 <!-- <fieldset>
-                  <div class="g-recaptcha" data-sitekey="6Lc_dN8nAAAAADWf08bLu4vAJk08HAsfJ4tkWonI">
-                  </div>
-                </fieldset> -->
+                                <div class="g-recaptcha" data-sitekey="6Lc_dN8nAAAAADWf08bLu4vAJk08HAsfJ4tkWonI">
+                                </div>
+                              </fieldset> -->
                 <button onclick="phoneAuth()" type="button">
                   Send OTP <span class="fa-solid fa-angle-right"></span>
                 </button>
@@ -489,11 +461,44 @@
                   <a href="javascript:void();" onclick="phoneAuth()">Code not Recieved yet ? -
                     Request Again</a>
                 </fieldset>
-                <button onclick="codeverify()" type="button">
-                  Sign Up <span class="fa-solid fa-angle-right"></span>
+                <button onclick="codeverify();" type="button">
+                  Continue <span class="fa-solid fa-angle-right"></span>
                 </button>
 
               </form>
+
+            </div>
+            <div class="formwrap" id="phno" style="position: absolute;left: 120%;">
+              <form id="loginForm" method="post" action="#" id="signupform">
+                <center><small><span id="error2" style="color: red;"></span></small></center>
+
+                <fieldset>
+                  <input style="margin-top: 10px;" type="text" id="name" name="name" placeholder="Name*"
+                    autocomplete="off" required>
+                </fieldset>
+                <fieldset>
+                  <input type="email" name="email" placeholder="Email Address*" autocomplete="off" id="regemail"
+                    required>
+                </fieldset>
+
+                <fieldset>
+                  <input type="password" name="password" placeholder="Password" autocomplete="off" id="regpassword"
+                    required>
+                </fieldset>
+                <fieldset>
+                  <input type="password" name="confirmpassword" placeholder="Confirm Password" autocomplete="off"
+                    required>
+                </fieldset>
+
+                <a href="javascript:void();" class="login_btn fp">Already have an Account ? -
+                  LogIn</a>
+                <div id="next_btn_container">
+                  <button type="button" id="next_btn" onclick="signUp()">
+                    SignUp <span class="fa-solid fa-angle-right"></span>
+                  </button>
+                </div>
+              </form>
+
 
             </div>
           </div>

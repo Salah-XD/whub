@@ -9,7 +9,7 @@ firebase.auth().onAuthStateChanged((user) => {
     $(".loginblock").hide();
     userLoggedIn = true;
     $(".loginblock").hide();
-    $(".registerblock").hide();
+    // $(".registerblock").hide();
     // $(".profileblock").show();
     console.log("user logged in");
 
@@ -72,6 +72,9 @@ function signUp() {
   const email = document.getElementById("regemail").value;
   const password = document.getElementById("regpassword").value;
   const name = document.getElementById("name").value;
+
+  const lrpopups = document.getElementsByClassName("lrpopup");
+  const registerblocks = document.getElementsByClassName("registerblock");
   let x = document.getElementById("reg");
   let y = document.getElementById("phno");
   firebase
@@ -81,10 +84,6 @@ function signUp() {
       return result.user.updateProfile({
         displayName: name,
       });
-    })
-    .then(function () {
-      x.style.left = "-120%";
-      y.style.left = "-0%";
     })
 
     .catch((error) => {
@@ -96,6 +95,13 @@ function signUp() {
     .finally(() => {
       // Re-enable the "nextBtn" button after the signup attempt (whether success or failure)
       nextBtn.removeAttribute("disabled");
+      for (let i = 0; i < lrpopups.length; i++) {
+        lrpopups[i].style.display = "none";
+      }
+
+      for (let i = 0; i < registerblocks.length; i++) {
+        registerblocks[i].style.display = "none";
+      }
     });
 }
 

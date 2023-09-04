@@ -80,6 +80,7 @@ function phoneAuth() {
       window.confirmationResult = confirmationResult;
       console.log(confirmationResult);
     })
+
     .catch(function (error) {
       console.log(error);
     });
@@ -107,8 +108,13 @@ function codeverify() {
       // User signed in successfully.
       console.log("Phone number verified successfully" + result.user);
     })
+    .then(function () {
+      x.style.left = "-0%";
+      y.style.left = "-120%";
+    })
     .catch(function (error) {
       console.log(error);
+      document.getElementById("error3").innerHTML = error.message;
     });
 }
 
