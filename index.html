@@ -319,6 +319,13 @@
 </head>
 
 <body>
+  <script type="module">
+    import {
+      getAuth,
+      signInWithPopup,
+      GoogleAuthProvider,
+    } from "https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js";
+  </script>
   <!-- -----------login reg begin----------------- -->
 
   <div class="lrpopup">
@@ -344,8 +351,25 @@
             <h3>Login</h3>
             <p>Enter Your Login Details Below</p>
             <div class=" formwrap">
-              <button id="glogin">google</button>
+
               <form method="post" action="#" id="loginForm">
+                <fieldset style="display: flex;justify-content: center;height: 50px;">
+                  <a href="">
+                    <!-- <div style="text-align: center;" id="glogin">
+                      <a href="" style="border: 1px solid #777;padding: 10px;border-radius: 7px;"><img width="20px"
+                          style="margin-bottom:3px; margin-right:5px;" alt="Google sign-in"
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />Log
+                        In with Google</a>
+
+                    </div> -->
+                    <button id="glogin"
+                      style="background: transparent;color: #111;font-size: 13px;border: 1px solid #777; border-radius: 8px;padding: 4px 8px;height: 40px;"><img
+                        width="20px" style="margin-bottom:3px; margin-right:5px;" alt="Google sign-in"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />Log
+                      In with Google</button>
+                  </a>
+
+                </fieldset>
 
                 <center><small><span id="error" style="color: red;"></span></small></center>
                 <fieldset>
