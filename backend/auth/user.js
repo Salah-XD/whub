@@ -46,24 +46,6 @@ function login() {
       }
     });
 }
-const email = document.getElementById("regemail").value;
-const password = document.getElementById("regpassword").value;
-const name = document.getElementById("name").value;
-// function signUp() {
-//   firebase
-//     .auth()
-//     .createUserWithEmailAndPassword(email, password)
-//     .then(function (result) {
-//       return result.user.updateProfile({
-//         displayName: name,
-//       });
-//     })
-//     .catch((error) => {
-//       nextBtn.setAttribute("disabled", "disabled");
-
-//       document.getElementById("error2").innerHTML = error.message;
-//     });
-// }
 
 function forgotPass() {
   const email = document.getElementById("email").value;
@@ -85,6 +67,27 @@ const passwordInput = document.getElementById("regpassword");
 const confirmPasswordInput = document.getElementsByName("confirmpassword")[0]; // Note: Using [0] to get the first matching element
 const nextBtn = document.getElementById("next_btn");
 
+function signUp() {
+  const email = document.getElementById("regemail").value;
+  const password = document.getElementById("regpassword").value;
+  const name = document.getElementById("name").value;
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(function (result) {
+      return result.user.updateProfile({
+        displayName: name,
+      });
+      nextBtn.removeAttribute("disabled");
+    })
+    .catch((error) => {
+      nextBtn.setAttribute("disabled", "disabled");
+      console.log("signup error");
+
+      document.getElementById("error2").innerHTML = error.message;
+    });
+}
+
 // Add an event listener to the form inputs to check for changes
 nameInput.addEventListener("input", validateForm);
 emailInput.addEventListener("input", validateForm);
@@ -92,7 +95,7 @@ passwordInput.addEventListener("input", validateForm);
 confirmPasswordInput.addEventListener("input", validateForm);
 
 // Function to check if all required fields are filled
-function signUp() {
+function validateForm() {
   const passwordValue = passwordInput.value.trim();
   const confirmPasswordValue = confirmPasswordInput.value.trim();
 
@@ -105,22 +108,8 @@ function signUp() {
     if (passwordValue !== confirmPasswordValue) {
       document.getElementById("error2").innerHTML =
         "Password and Confirm Password doesn't match";
-    } else if (passwordValue == confirmPasswordValue) {
-      document.getElementById("error2").innerHTML = null;
     } else {
-      firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, password)
-        .then(function (result) {
-          return result.user.updateProfile({
-            displayName: name,
-          });
-        })
-        .catch((error) => {
-          nextBtn.setAttribute("disabled", "disabled");
-
-          document.getElementById("error2").innerHTML = error.message;
-        });
+      document.getElementById("error2").innerHTML = null;
     }
     nextBtn.removeAttribute("disabled");
   } else {
@@ -130,4 +119,4 @@ function signUp() {
 }
 
 // Initial validation on page load
-signUp();
+validateForm();
