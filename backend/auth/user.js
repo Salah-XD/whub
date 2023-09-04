@@ -137,3 +137,51 @@ function validateForm() {
 
 // Initial validation on page load
 validateForm();
+
+///google authenticatio//////
+// const auth = getAuth();
+
+// const googlelogin = () => {
+//   const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+//   auth
+//     .signInWithPopup(googleProvider)
+//     .then(() => {
+//       window.location.assign("./profile");
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// };
+
+const auth = getAuth();
+console.log(auth);
+
+const provider = new GoogleAuthProvider();
+console.log(provider);
+
+//----- Google login code start
+document.getElementById("glogin").addEventListener("click", function () {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      alert("Welcome " + user.displayName);
+      console.log(user);
+      // ...
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+});
