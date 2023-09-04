@@ -46,25 +46,24 @@ function login() {
       }
     });
 }
+const email = document.getElementById("regemail").value;
+const password = document.getElementById("regpassword").value;
+const name = document.getElementById("name").value;
+// function signUp() {
+//   firebase
+//     .auth()
+//     .createUserWithEmailAndPassword(email, password)
+//     .then(function (result) {
+//       return result.user.updateProfile({
+//         displayName: name,
+//       });
+//     })
+//     .catch((error) => {
+//       nextBtn.setAttribute("disabled", "disabled");
 
-function signUp() {
-  const email = document.getElementById("regemail").value;
-  const password = document.getElementById("regpassword").value;
-  const name = document.getElementById("name").value;
-  firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then(function (result) {
-      return result.user.updateProfile({
-        displayName: name,
-      });
-    })
-    .catch((error) => {
-      nextBtn.setAttribute("disabled", "disabled");
-
-      document.getElementById("error2").innerHTML = error.message;
-    });
-}
+//       document.getElementById("error2").innerHTML = error.message;
+//     });
+// }
 
 function forgotPass() {
   const email = document.getElementById("email").value;
@@ -93,7 +92,7 @@ passwordInput.addEventListener("input", validateForm);
 confirmPasswordInput.addEventListener("input", validateForm);
 
 // Function to check if all required fields are filled
-function validateForm() {
+function signUp() {
   const passwordValue = passwordInput.value.trim();
   const confirmPasswordValue = confirmPasswordInput.value.trim();
 
@@ -106,8 +105,22 @@ function validateForm() {
     if (passwordValue !== confirmPasswordValue) {
       document.getElementById("error2").innerHTML =
         "Password and Confirm Password doesn't match";
-    } else {
+    } else if (passwordValue == confirmPasswordValue) {
       document.getElementById("error2").innerHTML = null;
+    } else {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(function (result) {
+          return result.user.updateProfile({
+            displayName: name,
+          });
+        })
+        .catch((error) => {
+          nextBtn.setAttribute("disabled", "disabled");
+
+          document.getElementById("error2").innerHTML = error.message;
+        });
     }
     nextBtn.removeAttribute("disabled");
   } else {
@@ -117,4 +130,4 @@ function validateForm() {
 }
 
 // Initial validation on page load
-validateForm();
+signUp();
