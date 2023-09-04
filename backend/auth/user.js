@@ -78,13 +78,16 @@ function signUp() {
       return result.user.updateProfile({
         displayName: name,
       });
-      nextBtn.removeAttribute("disabled");
     })
     .catch((error) => {
       nextBtn.setAttribute("disabled", "disabled");
       console.log("signup error");
 
       document.getElementById("error2").innerHTML = error.message;
+    })
+    .finally(() => {
+      // Re-enable the "nextBtn" button after the signup attempt (whether success or failure)
+      nextBtn.removeAttribute("disabled");
     });
 }
 
