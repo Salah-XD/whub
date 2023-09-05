@@ -332,9 +332,21 @@
     #notification .show {
       opacity: 1;
     }
+
+    @media (max-width: 768px) {
+      #notification {
+        /* Adjust styles for smaller screens here */
+        top: 60%;
+        left: 0%;
+        width: max-content;
+
+        transform: translate(-86%, -50%);
+
+      }
+    }
   </style>
   <div id="notification"
-    style="opacity: 0;position: absolute;display: flex;align-items: center;background: #bf8c4ec5;gap: 5px;padding: 1px 10px; border-radius: 7px;margin: 20px;top: 80%;left: 80%;z-index: 99;transition:opacity .3s ease ;">
+    style="opacity: 1;position: absolute;display: flex;align-items: center;background: #bf8c4ec5;gap: 5px;padding: 1px 10px; border-radius: 7px;margin: 20px;top: 80%;left: 80%;z-index: 99;transition:opacity .3s ease ;">
     <img style="width: 15px;" src="https://i.ibb.co/TqRnGs2/correct.png" alt="correct" border="0">
     <h5 style="font-size: 14px;">Successfully Logged In</h5>
 
