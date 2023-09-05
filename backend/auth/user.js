@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // After 4 seconds, hide the notification by removing the class
     setTimeout(() => {
       notification.style.opacity = 0;
-    }, 4000);
+    }, 2000);
 
     // location.replace("welcome.html");
   } else {
