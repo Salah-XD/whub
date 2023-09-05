@@ -8,18 +8,33 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     $(".loginblock").hide();
     userLoggedIn = true;
-    $(".loginblock").hide();
+    $(".lrpopup").hide();
     // $(".registerblock").hide();
     // $(".profileblock").show();
     console.log("user logged in");
+
+    // User is logged in
+    const notification = document.getElementById("notification");
+
+    // Show the notification by adding the class
+    notification.style.opacity = 1;
+
+    // After 4 seconds, hide the notification by removing the class
+    setTimeout(() => {
+      notification.style.opacity = 0;
+    }, 4000);
 
     // location.replace("welcome.html");
   } else {
     userLoggedIn = false;
     $(".loginblock").show();
     $(".profileblock").hide();
+    // 4000 milliseconds = 4 seconds
   }
 });
+const lrpopups = document.getElementsByClassName("lrpopup");
+
+const loginblock = document.getElementsByClassName("loginblock");
 
 function login() {
   // ----captcha.js----
@@ -43,6 +58,17 @@ function login() {
           .catch((error) => {
             document.getElementById("error").innerHTML = error.message;
             document.getElementById("error2").innerHTML = error.message;
+          })
+          .finally(() => {
+            // Re-enable the "nextBtn" button after the signup attempt (whether success or failure)
+            nextBtn.removeAttribute("disabled");
+            for (let i = 0; i < lrpopups.length; i++) {
+              lrpopups[i].style.display = "none";
+            }
+
+            for (let i = 0; i < loginblock.length; i++) {
+              loginblock[i].style.display = "none";
+            }
           });
       }
     });
