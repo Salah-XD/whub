@@ -5,7 +5,7 @@ firebase.auth().onAuthStateChanged((user) => {
     const profile = user.displayName;
     const userProfilePicture = user.photoURL;
 
-    document.getElementById("user").innerHTML = "  Konichiwa<br/>" + profile;
+    document.getElementById("user").innerHTML = profile;
     document.getElementById("pfp").src = userProfilePicture;
     document.getElementById("userEmail").innerHTML = user.email;
   }
