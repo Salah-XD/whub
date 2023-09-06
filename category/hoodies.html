@@ -50,6 +50,21 @@
       hideDecimalForWholeNumbers: false,
     };
   </script>
+  <style>
+    .product-card-container img{
+      position: absolute;
+    }
+    /* .product-card-container img:hover{
+          opacity: 0;
+          transition: 1s ease-in-out;
+    } */
+    .product-card-container .back-img:hover{
+      opacity: 0; 
+    }
+    .product-card-container .front-img:hover{
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -202,16 +217,16 @@
   }
 }
 " data-wf-page-link-href-prefix="" data-wf-cart-duration="400" class="w-commerce-commercecartwrapper">
-                <a href="hoodies.html" data-node-type="commerce-cart-open-link" aria-haspopup="dialog"
+                <!-- <a href="hoodies.html" data-node-type="commerce-cart-open-link" aria-haspopup="dialog"
                   aria-label="Open cart" role="button"
                   class="w-commerce-commercecartopenlink cart-button w-inline-block"><img
                     src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f37c31d640654d06f2594f_Shop%20Icon.svg"
-                    loading="lazy" alt="" class="cart-image" />
-                  <div
+                    loading="lazy" alt="" class="cart-image" /> -->
+                  <!-- <div
                     data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItemsCount%22%7D%7D%5D"
                     class="w-commerce-commercecartopenlinkcount cart-quantity">
                     0
-                  </div>
+                  </div> -->
                 </a>
                 <div data-node-type="commerce-cart-container-wrapper" style="display: none"
                   class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar cart-wrapper">
@@ -648,7 +663,7 @@
           <div role="listitem" class="product-card w-dyn-item">
             <div class="product-card-container">
               <a href="../product/milk-hoddie.html" class="product-card-image-holder w-inline-block"><img
-                  src="images/tshirt3.png" >
+                  src="images/zoom2.png" class="front-img"><img src="images/tshirt3.png" class="back-img">
               </a>
               <div class="product-card-details-container">
                 <div class="product-price-container">
@@ -713,7 +728,7 @@
           <div role="listitem" class="product-card w-dyn-item">
             <div class="product-card-container">
               <a href="../product/white-hoddie.html" class="product-card-image-holder w-inline-block"><img
-                  src="images/tshirt6.png">
+                  src="images/zoom4.png" class="front-img"><img src="images/tshirt6.png" class="back-img">
               </a>
               <div class="product-card-details-container">
                 <div class="product-price-container">
