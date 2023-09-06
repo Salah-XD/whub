@@ -11934,3 +11934,17 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
+.product-card-container img{
+  position: absolute;
+}
+/* .product-card-container img:hover{
+  opacity: 0;
+  transition: 1s ease-in-out;
+} */
+.product-card-container .back-img:hover{
+  opacity: 0;
+}
+.product-card-container .front-img:hover{
+  opacity: 1;
+}

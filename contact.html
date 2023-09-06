@@ -202,16 +202,16 @@
   }
 }
 " data-wf-page-link-href-prefix="" data-wf-cart-duration="400" class="w-commerce-commercecartwrapper">
-                <a href="contact#" data-node-type="commerce-cart-open-link" aria-haspopup="dialog"
+                <!-- <a href="contact#" data-node-type="commerce-cart-open-link" aria-haspopup="dialog"
                   aria-label="Open cart" role="button"
                   class="w-commerce-commercecartopenlink cart-button w-inline-block"><img
                     src="https://assets.website-files.com/62f3719eed276382ac6eeb38/62f37c31d640654d06f2594f_Shop%20Icon.svg"
-                    loading="lazy" alt="" class="cart-image" />
-                  <div
+                    loading="lazy" alt="" class="cart-image" /> -->
+                  <!-- <div
                     data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItemsCount%22%7D%7D%5D"
                     class="w-commerce-commercecartopenlinkcount cart-quantity">
                     0
-                  </div>
+                  </div> -->
                 </a>
                 <div data-node-type="commerce-cart-container-wrapper" style="display: none"
                   class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar cart-wrapper">
@@ -608,26 +608,26 @@
                   opacity: 1;
                 " class="animation-on-load-02">
               <div class="w-form">
-                <form id="wf-form-Contact-Form" data-name="Contact Form" method="get"
+                <form id="wf-form-Contact-Form" name="submit-to-google-sheet" data-name="Contact Form" method="get"
                   data-wf-page-id="62f3719eed2763766e6eeb54" data-wf-element-id="76664e9b-4bfe-fe1f-05c4-71317abd24e1">
                   <div class="w-layout-grid form-grid">
                     <div id="w-node-edb90237-725d-4abb-8b66-6ddd8632e28d-6e6eeb54" class="fields-container">
                       <label for="First-Name" class="contact-field-label">Name</label><input type="text"
-                        class="contact-text-field w-input" maxlength="256" data-name="First Name"
+                        class="contact-text-field w-input" name="name" maxlength="256" data-name="First Name"
                         placeholder="" id="First-Name" required="" />
                     </div>
                     <div id="w-node-_636179ea-09d4-1363-2b36-31136978fb80-6e6eeb54" class="fields-container">
                       <label for="email" class="contact-field-label">e-mail</label><input type="email"
-                        class="contact-text-field w-input" maxlength="256"  data-name="email" placeholder=""
+                        class="contact-text-field w-input" name="email" maxlength="256"  data-name="email" placeholder=""
                         id="email" required="" />
                     </div>
                     <div id="w-node-c3eb9be0-c7fe-4771-fbc0-63144788750e-6e6eeb54" class="fields-container last">
                       <label for="Message" class="contact-field-label">Message</label><textarea id="Message"
-                        maxlength="5000" data-name="Message" placeholder="" required=""
+                        maxlength="5000" name="message" data-name="Message" placeholder="" required=""
                         class="contact-text-field message w-input"></textarea>
                     </div>
                   </div>
-                  <input type="submit" data-wait="Please wait..." value="Submit" class="button full w-button" />
+                  <input type="submit" data-wait="Please wait..." value="Submit" name="btn" class="button full w-button" />
                 </form>
                 <div class="success-message black w-form-done">
                   <div>Thank you! Your submission has been received!</div>
@@ -1118,5 +1118,24 @@
     })
   </script> -->
 </body>
+<script>
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbz_-9vxy5uY_QIpJi0-2wLjViRDdn-4AD61nVJLGlvLgp2lsAe0qgeIi0mtmUsthqki/exec";
+  const form = document.forms["submit-to-google-sheet"];
+  
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => {
+        
+        setTimeout(function () {
+          msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
+</script>
 
 </html>
