@@ -1,11 +1,13 @@
-.lrpopup {
+.lrpopup,
+.outofstock {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 6;
   display: none;
 }
-.lrpopupinner {
+.lrpopupinner,
+.lrpopupinner2 {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -16,7 +18,8 @@
   overflow-y: auto;
   padding: 60px 40px;
 }
-.lrpopupcontent {
+.lrpopupcontent,
+.lrpopupcontent2 {
   width: auto;
   height: auto;
   background: rgba(255, 255, 255, 0.8);
@@ -29,7 +32,8 @@
   position: relative;
   overflow: hidden;
 }
-.lrblockwrap {
+.lrblockwrap,
+.lrblockwrap2 {
   padding: 60px 80px 80px 80px;
   min-width: 640px;
   min-height: 460px;
@@ -177,11 +181,13 @@ a.close_lrpopup {
 }
 
 @media (max-width: 1040px) {
-  .lrpopupinner {
+  .lrpopupinner,
+  .lrpopupinner2 {
     padding: 50px 40px;
     background: rgba(0, 0, 0, 0.5);
   }
-  .lrblockwrap {
+  .lrblockwrap,
+  .lrblockwrap2 {
     padding: 40px 40px 40px 40px;
     min-width: 200px;
     min-height: 100px;
