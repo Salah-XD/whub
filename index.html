@@ -353,9 +353,10 @@
 
         <div class="lrblockwrap2" style="text-align: center;padding: ;">
           <h3>OOPS!</h3>
+
           <h6>This Product is currently Out of Stock</h6>
           <p style="font-size: 15px;color: #777;">Pre-Order now for FREE! <span style="color: red;">*</span> </p>
-          <button type="submit" id="pre_book"
+          <button onclick="pbtn()" type="submit" id="pre_book"
             style="color: #fff; background:#bf8c4e ; padding: 17px;border-radius: 8px;">Pre-order
             <span class="fa-solid fa-angle-right"></span></button>
           <p style="margin-top: 20px;color: #777;font-size: 12px;">Avail 20% of discount and free Door Delivery on
@@ -2525,7 +2526,7 @@
                   <label for="Newsletter-Email-2" class="newsletter-field-label">Subscribe to our newsletter.</label>
                 </div>
                 <div class="fade-in-move-on-scroll _100width">
-                  <input name="email" type="email" class="newsletter-text-field w-input" maxlength="256"
+                  <input name="Email" type="email" class="newsletter-text-field w-input" maxlength="256"
                     name="Newsletter-Email-2" data-name="Newsletter Email 2" placeholder="E-mail"
                     id="Newsletter-Email-2" />
                 </div>
@@ -2892,6 +2893,8 @@
   <script src="backend/auth/country.js"></script>
   <script src="backend/auth/phone.js"></script>
   <script src="backend/auth/welcome.js"></script>
+  <script src="js/prebook.js"></script>
+
 
 
   <!-- <script src="backend/auth/captcha.js"></script> -->
@@ -2916,6 +2919,25 @@
       })
       .catch((error) => console.error("Error!", error.message));
   });
+</script>
+<script>
+  const pbn = document.getElementById("pbn");
+  const oos = document.getElementById("oos");
+  const prebookbtn = document.getElementById("pre_book");
+
+  // const loginblock = document.getElementsByClassName("loginblock");
+  function pbtn() {
+    //   alert("Pre-booking is not available right now");
+
+    // Show the pbn by adding the class
+    oos.style.display = "none";
+    pbn.style.opacity = 1;
+
+    // After 4 seconds, hide the pbn by removing the class
+    setTimeout(() => {
+      pbn.style.opacity = 0;
+    }, 2000);
+  }
 </script>
 
 </html>

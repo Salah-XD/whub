@@ -214,22 +214,22 @@ validateForm();
 // function glogin() {
 //   alert("success");
 // }
-const linker = document.getElementById("linker");
-linker.addEventListener("click", function mainlink() {
-  const user = firebase.auth().currentUser;
-  alert("success");
+// const linker = document.getElementById("linker");
+// linker.addEventListener("click", function mainlink() {
+//   const user = firebase.auth().currentUser;
+//   alert("success");
 
-  if (user) {
-    // User is already logged in, show the product not available div
-    // loginblock.style.display = "none";
-    // oos.style.display = "block";
-    $(".outofstock").show();
-    $(".loginblock").hide();
-  } else {
-    // User is not logged in, show the login div
-    // loginblock.style.display = "block";
-    //oos.style.display = "none";
-    $(".outofstock").hide();
-    $(".loginblock").show();
-  }
-});
+//   if (user) {
+//     // User is already logged in, show the product not available div
+//     // loginblock.style.display = "none";
+//     // oos.style.display = "block";
+//     $(".outofstock").show();
+//     $(".loginblock").hide();
+//   } else {
+//     // User is not logged in, show the login div
+//     // loginblock.style.display = "block";
+//     //oos.style.display = "none";
+//     $(".outofstock").hide();
+//     $(".loginblock").show();
+//   }
+// });
