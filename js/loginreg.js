@@ -5,15 +5,7 @@ $(document).ready(function () {
     $(".loginblock").fadeOut();
     $(".registerblock").fadeOut();
   });
-  $("a.mainlink").click(function () {
-    if (userLoggedIn) {
-      $(".loginblock").hide();
-      $(".oos").fadeIn();
-    } else {
-      $(".loginblock").fadeIn();
-      $(".oos").hide();
-    }
-  });
+
   $("a.login_btn").click(function () {
     if (userLoggedIn) {
       // User is logged in, show profile
@@ -29,6 +21,17 @@ $(document).ready(function () {
     $(".registerblock").hide();
     $(this).addClass("active");
     $("a.register_btn").removeClass("active");
+  });
+  $("a.mainlink").click(function () {
+    // alert("test");
+    if (!userLoggedIn) {
+      // alert("if");
+      $("a.login_btn").click();
+    } else {
+      // alert("else");
+      $(".loginblock").hide();
+      $(".oos").fadeIn();
+    }
   });
   $("a.register_btn").click(function () {
     $(".lrpopup").fadeIn();
