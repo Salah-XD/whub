@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $("a.close_lrpopup").click(function () {
     $(".lrpopup").fadeOut();
+    $(".outofstock").fadeOut();
     $(".loginblock").fadeOut();
     $(".registerblock").fadeOut();
   });
