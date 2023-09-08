@@ -4599,7 +4599,7 @@ figcaption {
 }
 
 .section.gold-section {
-  background-color: #bf8c4e;
+  background-color: #1A1A1A;
 }
 
 .section.relative {
@@ -5771,7 +5771,7 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
-  background-color: rgba(191, 140, 78, 0.4);
+  background-color: #808080;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
