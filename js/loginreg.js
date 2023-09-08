@@ -5,6 +5,15 @@ $(document).ready(function () {
     $(".loginblock").fadeOut();
     $(".registerblock").fadeOut();
   });
+  $("a.mainlink").click(function () {
+    if (userLoggedIn) {
+      $(".loginblock").hide();
+      $(".oos").fadeIn();
+    } else {
+      $(".loginblock").fadeIn();
+      $(".oos").hide();
+    }
+  });
   $("a.login_btn").click(function () {
     if (userLoggedIn) {
       // User is logged in, show profile
